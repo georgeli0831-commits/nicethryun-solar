@@ -1,0 +1,61 @@
+
+> nicethryun-solar@0.1.0 build
+> astro build
+
+14:31:37 [content] Syncing content
+14:31:37 [content] Synced content
+14:31:37 [types] Generated 71ms
+14:31:37 [build] output: "static"
+14:31:37 [build] mode: "static"
+14:31:37 [build] directory: /Users/lijiaming/Projects/nicethryun-solar/dist/
+14:31:37 [build] Collecting build info...
+14:31:37 [build] ✓ Completed in 79ms.
+14:31:37 [build] Building static entrypoints...
+14:31:38 [vite] ✓ built in 260ms
+14:31:38 [build] ✓ Completed in 275ms.
+
+ building client (vite) 
+14:31:38 [vite] transforming...
+14:31:38 [vite] ✓ 1727 modules transformed.
+14:31:38 [vite] rendering chunks...
+14:31:38 [vite] computing gzip size...
+14:31:38 [vite] dist/_astro/BaseLayout.astro_astro_type_script_index_0_lang.FnzABwKT.js  83.68 kB │ gzip: 24.85 kB
+14:31:38 [vite] ✓ built in 339ms
+
+ generating static routes 
+14:31:38 ▶ src/pages/404.astro
+14:31:38   └─ /404.html (+4ms) 
+14:31:38 ▶ src/pages/applications/[slug].astro
+14:31:38   ├─ /applications/driveway/index.html (+1ms) 
+14:31:38   ├─ /applications/entry/index.html (+1ms) 
+14:31:38   ├─ /applications/perimeter/index.html (+1ms) 
+14:31:38   ├─ /applications/garden/index.html (+1ms) 
+14:31:38   └─ /applications/patio/index.html (+1ms) 
+14:31:38 ▶ src/pages/applications/index.astro
+14:31:38   └─ /applications/index.html (+1ms) 
+14:31:38 ▶ src/pages/index.astro
+14:31:38   └─ /index.html (+1ms) 
+14:31:38 ▶ src/pages/inquiry/index.astro
+14:31:38   └─ /inquiry/index.html (+1ms) 
+14:31:38 ▶ src/pages/manufacturing/index.astro
+14:31:38   └─ /manufacturing/index.html (+1ms) 
+14:31:38 ▶ src/pages/oem/index.astro
+14:31:38   └─ /oem/index.html (+1ms) 
+14:31:38 ▶ src/pages/products/[slug].astro
+14:31:38   ├─ /products/multi-head/index.html (+1ms) 
+14:31:38   ├─ /products/split-panel/index.html (+0ms) 
+14:31:38   ├─ /products/compact-wall/index.html (+0ms) 
+14:31:38   ├─ /products/slim-wall/index.html (+0ms) 
+14:31:38   ├─ /products/solar-flood/index.html (+0ms) 
+14:31:38   └─ /products/garden-spot/index.html (+1ms) 
+14:31:38 ▶ src/pages/products/index.astro
+14:31:38   └─ /products/index.html (+1ms) 
+14:31:38 ▶ src/pages/resources/index.astro
+14:31:38   └─ /resources/index.html (+0ms) 
+14:31:38 λ src/pages/robots.txt.ts
+14:31:38   └─ /robots.txt (+0ms) 
+14:31:38 ✓ Completed in 39ms.
+
+14:31:38 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+14:31:38 [build] 19 page(s) built in 743ms
+14:31:38 [build] Complete!

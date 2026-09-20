@@ -1,0 +1,6 @@
+$ ./node_modules/.bin/tsc --noEmit
+Exit code: 0
+Raw stdout: (empty)
+Raw stderr: (empty)
+
+Note: tsconfig.json extends astro/tsconfigs/base without checkJs; this result does not assert that all native JavaScript is strictly type-checked.

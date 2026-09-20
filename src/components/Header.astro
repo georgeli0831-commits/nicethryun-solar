@@ -1,0 +1,26 @@
+---
+import { normalizeLinks } from '../lib/links.js';
+import { iconify } from '../lib/icons.js';
+const html = String.raw`
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="topline"><span>CHINA MANUFACTURING · GLOBAL B2B</span><span>For distributors, brands & project partners <i data-lucide="arrow-up-right"></i></span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#/" aria-label="NICETHRYUN home">NICETHRYUN<span class="brand-dot">.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <div class="nav-dropdown"><button class="nav-link" id="product-menu-toggle" aria-expanded="false" aria-controls="product-menu">Products <i data-lucide="chevron-down"></i></button>
+        <div class="mega-menu" id="product-menu" hidden>
+          <div><p class="eyebrow">SOLAR SECURITY</p><a href="#/products?family=sensor">Motion sensor lights <i data-lucide="arrow-up-right"></i></a><a class="sub" href="#/products?type=multi">Multi-head lights</a><a class="sub" href="#/products?type=compact">Compact wall lights</a><a class="sub" href="#/products?type=split">Split-panel lights</a><a href="#/products?family=flood">Solar floodlights <i data-lucide="arrow-up-right"></i></a><a href="#/products?family=garden">Garden spotlights <i data-lucide="arrow-up-right"></i></a></div>
+          <div><p class="eyebrow">A BETTER START</p><a href="#/applications/driveway">Find by application</a><a href="#/resources">Selection & technical resources</a><a href="#/oem">Build your own range</a><div class="mega-note"><i data-lucide="list-checks"></i><p>One list. Multiple products.<br><b>A clearer quotation request.</b></p></div></div>
+        </div>
+      </div>
+      <a class="nav-link" href="#/applications/driveway">Applications</a>
+      <a class="nav-link" href="#/manufacturing">Manufacturing</a>
+      <a class="nav-link" href="#/oem">OEM / ODM</a>
+      <a class="nav-link" href="#/resources">Resources</a>
+    </nav>
+    <div class="header-actions"><button class="quote-toggle btn btn-amber" data-action="quote"><i data-lucide="clipboard-list"></i><span>Quote list</span><b class="quote-count">0</b></button><button class="icon-button mobile-toggle" id="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu"></i></button></div>
+  </header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" hidden><a href="#/products">All products</a><a href="#/products?family=sensor">Motion sensor lights</a><a href="#/products?family=flood">Solar floodlights</a><a href="#/products?family=garden">Garden spotlights</a><a href="#/applications/driveway">Applications</a><a href="#/manufacturing">Manufacturing</a><a href="#/oem">OEM / ODM</a><a href="#/resources">Resources</a></nav>
+`;
+---
+<Fragment set:html={iconify(normalizeLinks(html))} />

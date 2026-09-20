@@ -1,0 +1,23 @@
+{
+  "verification": "Conditional VM lifecycle simulation using the unmodified src/scripts/site.js; not a real browser BFCache observation.",
+  "assumption": "Browser restores page A from BFCache after page B changed stored inquiry data.",
+  "sourceEvidence": [
+    "src/scripts/site.js:12-35 reads persistent state only at module initialization",
+    "src/scripts/site.js:762-765 unconditionally writes page memory during pagehide",
+    "No pageshow handler before repair"
+  ],
+  "steps": [
+    "Initialize A with empty storage; dispatch A pagehide",
+    "Initialize B; set cart=[{id:solar-flood,qty:200}], draft={email:qa@example.test}, compare=[solar-flood]; persist and dispatch pagehide",
+    "Reuse original A VM without rerunning module, modeling a BFCache restoration",
+    "Dispatch A pagehide"
+  ],
+  "rawOutput": [
+    "B saved before browser restores A: {\"cart\":[{\"id\":\"solar-flood\",\"qty\":200}],\"draft\":{\"email\":\"qa@example.test\"}}",
+    "A registered pageshow handler: false",
+    "A restored in-memory cart: []",
+    "After restored A leaves: {\"cart\":[],\"draft\":{}}",
+    "After restored A leaves, comparison: {\"compare\":[],\"homeFilter\":\"all\",\"homeSearch\":\"\",\"homeApp\":\"driveway\",\"lastBrief\":null}"
+  ],
+  "conclusion": "Migration introduced a stale-memory overwrite if BFCache restores an earlier document. Real-browser regression requested from QA."
+}

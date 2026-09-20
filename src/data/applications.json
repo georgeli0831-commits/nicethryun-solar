@@ -1,0 +1,122 @@
+{
+  "driveway": {
+    "label": "Driveway",
+    "title": "A clearer arrival, after dark.",
+    "intro": "Guide the approach to homes and small premises. Start with the driveway width, wall position and sensor response — then select the product format.",
+    "image": "hero-courtyard.png",
+    "caption": "A considered welcome. A visible approach.",
+    "sub": "Motion-sensor lighting for arrival points and the way home.",
+    "note": "Illustrative application scene",
+    "match": "multi-head",
+    "heading": "Light the approach.",
+    "checks": [
+      "Direct adjustable heads toward the approach",
+      "Keep the solar panel clear of overhangs",
+      "Match sensor behavior to people and vehicles"
+    ],
+    "questions": [
+      [
+        "Understand the approach",
+        "Share the driveway width, mounting position and approach direction. A site photo makes the brief easier to assess."
+      ],
+      [
+        "Plan for usable sunlight",
+        "An exposed mounting point may suit an integrated unit. A shaded wall may call for a separate panel."
+      ],
+      [
+        "Agree on operating behavior",
+        "Specify motion-only, dim-to-bright or other required modes. Runtime must be assessed against the final configuration."
+      ]
+    ]
+  },
+  "entryway": {
+    "label": "Entryway",
+    "title": "Make every entrance feel considered.",
+    "intro": "Bring light to doors, gates and side entrances. Choose a compact wall format or a separate panel for installations beneath an overhang.",
+    "image": "scene-entry.jpg",
+    "caption": "A brighter welcome starts at the door.",
+    "sub": "Wall-mounted lighting for entrances and everyday access.",
+    "note": "Application image from supplied catalogue",
+    "match": "compact-wall",
+    "heading": "Make the first step clear.",
+    "checks": [
+      "Map the doorway, gate and approach path",
+      "Consider shade from porches and roof edges",
+      "Confirm sensor coverage before sample approval"
+    ],
+    "questions": [
+      [
+        "Define the access point",
+        "A single door, a wider gateway and a side passage need different light distribution. Start with a photo and approximate dimensions."
+      ],
+      [
+        "Check the mounting surface",
+        "Confirm masonry, cladding or another surface. Include mounting hardware requirements in the quotation request."
+      ],
+      [
+        "Protect the user experience",
+        "Describe the desired trigger behavior and light color. Confirm these with a sample before a larger order."
+      ]
+    ]
+  },
+  "perimeter": {
+    "label": "Perimeter",
+    "title": "Bring clarity to the boundary.",
+    "intro": "Boundary walls and side passages need a planned sequence of light. Combine mounting positions, daytime exposure and operating requirements in one project brief.",
+    "image": "scene-perimeter.jpg",
+    "caption": "Consider the whole route.",
+    "sub": "A project begins with the space, the mounting points and the night-time need.",
+    "note": "Application image from supplied catalogue",
+    "match": "solar-flood",
+    "heading": "Think beyond one fixture.",
+    "checks": [
+      "Mark each mounting point on a simple plan",
+      "Check shaded sections independently",
+      "Ask for coverage and runtime evidence"
+    ],
+    "questions": [
+      [
+        "Mark the complete route",
+        "Share the boundary length, obstructions and likely mounting points. This helps identify where different formats may be needed."
+      ],
+      [
+        "Separate light and panel needs",
+        "A mounting point with poor daylight may benefit from a split format. Plan cable routes before selecting a final model."
+      ],
+      [
+        "Define the coverage target",
+        "Agree on light distribution and operating hours. Request a lighting calculation where the project requires it."
+      ]
+    ]
+  },
+  "garden": {
+    "label": "Garden & path",
+    "title": "Let the landscape lead the way.",
+    "intro": "Add accent lighting around planting and paths. Build a coordinated outdoor assortment while keeping landscape lighting and security lighting requirements distinct.",
+    "image": "scene-garden.jpg",
+    "caption": "Small details. A more inviting garden.",
+    "sub": "Solar spotlights for planting, edges and outdoor features.",
+    "note": "Application image from supplied catalogue",
+    "match": "garden-spot",
+    "heading": "Build a complete outdoor range.",
+    "checks": [
+      "Separate accent light from security coverage",
+      "Choose daylight access over hidden placement",
+      "Coordinate the light color across the range"
+    ],
+    "questions": [
+      [
+        "Identify the focal points",
+        "List planting, pathways and architectural features. Decide whether the priority is atmosphere, guidance or security."
+      ],
+      [
+        "Allow for seasonal growth",
+        "Consider shade from growing plants and trees. Keep panel exposure in the brief, including the installation season."
+      ],
+      [
+        "Plan the range as a whole",
+        "Decide pack sizes and complementary wall-light families. Retail-ready packaging can be part of the same inquiry."
+      ]
+    ]
+  }
+}

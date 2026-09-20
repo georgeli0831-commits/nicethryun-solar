@@ -1,0 +1,12 @@
+{
+  "familyNames": {
+    "sensor": "Motion sensor lights",
+    "flood": "Solar floodlights",
+    "garden": "Garden spotlights"
+  },
+  "typeNames": {
+    "multi": "Multi-head lights",
+    "compact": "Compact wall lights",
+    "split": "Split-panel lights"
+  }
+}

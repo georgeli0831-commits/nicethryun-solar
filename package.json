@@ -1,0 +1,33 @@
+{
+  "name": "nicethryun-solar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "qa": "node scripts/qa.mjs",
+    "qa:lighthouse": "node scripts/lighthouse.mjs",
+    "qa:integrity": "node scripts/check-migration.mjs"
+  },
+  "dependencies": {
+    "astro": "5.18.2",
+    "@astrojs/sitemap": "3.7.3",
+    "lucide": "1.8.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.3",
+    "sharp": "^0.34.5",
+    "playwright": "^1.58.2",
+    "lighthouse": "^13.0.3",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "prettier": "^3.8.1"
+  }
+}

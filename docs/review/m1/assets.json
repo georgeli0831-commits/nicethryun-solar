@@ -1,0 +1,309 @@
+{
+  "source": "NICETHRYUN_融合版_独立预览.html",
+  "sourceSha256": "dc885c33e6ae706868526131cbf85773f13b6c1af8e94803152d5d62b4eb82f0",
+  "cssSha256": "f8d9c65e34eff535f4bd918bd9b8dd88152abc759d3ee3fbf090c2a873368321",
+  "assets": [
+    {
+      "name": "product-split-detail.png",
+      "sourceBytes": 279824,
+      "bytes": 117597,
+      "width": 800,
+      "height": 781,
+      "sourceWidth": 800,
+      "sourceHeight": 781,
+      "settings": {
+        "palette": true,
+        "quality": 100,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "0569d5b01b8c065ebd7deca16529508863e7e783b9207b646700bbcc5abb7d94",
+      "sha256": "631cd529330adb294f81d2e4437544167b34749b51c70c7c859cb472235b1de0",
+      "delivery": {
+        "name": "product-split-detail.webp",
+        "bytes": 59856,
+        "quality": 95,
+        "sha256": "5fa3e5c11a8781cfc8b5daa2105f7fc4e652b3e52a0e065f4443e4ddb582e544"
+      }
+    },
+    {
+      "name": "product-flood.jpg",
+      "sourceBytes": 107056,
+      "bytes": 107056,
+      "width": 720,
+      "height": 644,
+      "sourceWidth": 720,
+      "sourceHeight": 644,
+      "settings": null,
+      "sourceSha256": "b56ba21a0631e087f82932e0325ba2844efead816711c2915818ba884faa881b",
+      "sha256": "b56ba21a0631e087f82932e0325ba2844efead816711c2915818ba884faa881b"
+    },
+    {
+      "name": "scene-perimeter.jpg",
+      "sourceBytes": 149391,
+      "bytes": 149391,
+      "width": 928,
+      "height": 634,
+      "sourceWidth": 928,
+      "sourceHeight": 634,
+      "settings": null,
+      "sourceSha256": "7ab277d49d2dcbccccdce051eabe1ae29eea05e6ad8034fb6abb74ef90cf8817",
+      "sha256": "7ab277d49d2dcbccccdce051eabe1ae29eea05e6ad8034fb6abb74ef90cf8817"
+    },
+    {
+      "name": "scene-garden.jpg",
+      "sourceBytes": 143042,
+      "bytes": 143042,
+      "width": 927,
+      "height": 634,
+      "sourceWidth": 927,
+      "sourceHeight": 634,
+      "settings": null,
+      "sourceSha256": "e45e69ac2d2507431de145769a624699889c1906dcfd70edcd0258710b9b9d17",
+      "sha256": "e45e69ac2d2507431de145769a624699889c1906dcfd70edcd0258710b9b9d17"
+    },
+    {
+      "name": "product-multi-detail.png",
+      "sourceBytes": 943681,
+      "bytes": 391276,
+      "width": 1500,
+      "height": 1500,
+      "sourceWidth": 1500,
+      "sourceHeight": 1500,
+      "settings": {
+        "palette": true,
+        "quality": 80,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "ca66fe4e9e6cec63b4ed6624e67a5855ba29eb8e5882c2b6db7795277a163f21",
+      "sha256": "2044d74638287053add73e949b68a252ddd092d6d114944e05e076b93881cffb",
+      "delivery": {
+        "name": "product-multi-detail.webp",
+        "bytes": 183850,
+        "quality": 95,
+        "sha256": "28ce66fd7c58908fb649fd748124a4656fa61d5e14a136a0cde0dd637da75ecb"
+      }
+    },
+    {
+      "name": "product-spot.jpg",
+      "sourceBytes": 127073,
+      "bytes": 127073,
+      "width": 1600,
+      "height": 1600,
+      "sourceWidth": 1600,
+      "sourceHeight": 1600,
+      "settings": null,
+      "sourceSha256": "2eaf193f12979e5f0cda9a67ad54179f3529aa83993717d31eb462b4a924aaa7",
+      "sha256": "2eaf193f12979e5f0cda9a67ad54179f3529aa83993717d31eb462b4a924aaa7"
+    },
+    {
+      "name": "product-split.png",
+      "sourceBytes": 394087,
+      "bytes": 153217,
+      "width": 800,
+      "height": 800,
+      "sourceWidth": 800,
+      "sourceHeight": 800,
+      "settings": {
+        "palette": true,
+        "quality": 100,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "542b3d14c2d8dd6c7b669a472d46a6662aceb4516022c3ae51a4e75f8a0588a5",
+      "sha256": "c6473f797f7f0610b54dd2a8e6620d2947e1aeff2cbe2055b64d54a72468a0da",
+      "delivery": {
+        "name": "product-split.webp",
+        "bytes": 86744,
+        "quality": 95,
+        "sha256": "a9bdb7d3ee651d66cbc213c60257d6d0b46b76127576efc93e6d141f3f0698ce"
+      }
+    },
+    {
+      "name": "product-compact.png",
+      "sourceBytes": 419362,
+      "bytes": 178992,
+      "width": 800,
+      "height": 800,
+      "sourceWidth": 800,
+      "sourceHeight": 800,
+      "settings": {
+        "palette": true,
+        "quality": 100,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "59cc5f90378b054a1622fe92087df89cb7c380fd25e8c08f59931633dc07833a",
+      "sha256": "b16f35b4ad5c19d4eef65e604c28ee07cd85d47ffeb36628725af74548dfb4e8",
+      "delivery": {
+        "name": "product-compact.webp",
+        "bytes": 75952,
+        "quality": 95,
+        "sha256": "cdac48caff887b5271cd89979f8b142f3229b0fc72d90f418ab336fc3222b00b"
+      }
+    },
+    {
+      "name": "factory-assembly.png",
+      "sourceBytes": 126264,
+      "bytes": 48151,
+      "width": 276,
+      "height": 307,
+      "sourceWidth": 276,
+      "sourceHeight": 307,
+      "settings": {
+        "palette": true,
+        "quality": 100,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "07867c283359d766e2faa3d8e401608d87225fc3a68b160b41b58e004d8259a1",
+      "sha256": "d28008c0431bffea1af42e280f6f9464352ae0f9c715792847dd668657ce9f35",
+      "delivery": {
+        "name": "factory-assembly.webp",
+        "bytes": 24586,
+        "quality": 95,
+        "sha256": "153649a97b9ef2507e3712e7419b598bc45c368c1f0013fbe372f71bcda58cd2"
+      }
+    },
+    {
+      "name": "factory-showroom.png",
+      "sourceBytes": 173315,
+      "bytes": 85382,
+      "width": 566,
+      "height": 240,
+      "sourceWidth": 566,
+      "sourceHeight": 240,
+      "settings": {
+        "palette": true,
+        "quality": 100,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "9068a337e07806769a6a4025aeef19c8ba312010c99b87cabc1f887b8349bf17",
+      "sha256": "e76ec53f4a594b5ad516dbcabb0e4f6882e7f5bbb774a487deda2d9df044919b",
+      "delivery": {
+        "name": "factory-showroom.webp",
+        "bytes": 40880,
+        "quality": 95,
+        "sha256": "5258255b2786e66e24c4effaf985e5f73363df9a79b82952ba67d1b38770e1b2"
+      }
+    },
+    {
+      "name": "product-slim.png",
+      "sourceBytes": 192640,
+      "bytes": 101734,
+      "width": 720,
+      "height": 720,
+      "sourceWidth": 720,
+      "sourceHeight": 720,
+      "settings": {
+        "palette": true,
+        "quality": 100,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "ea669f23619f4fa78dae9b2dfc3aa7a71df393920be1f3e6f24c128c7747600b",
+      "sha256": "3e5afba40567807ff3906eeefb6b08d018f71086c55629618d12485d8fd9d045",
+      "delivery": {
+        "name": "product-slim.webp",
+        "bytes": 36776,
+        "quality": 95,
+        "sha256": "1f6053fee008c2ddd4bed4e620958ef2ef5912ec9ee96a2413d00aae1f205848"
+      }
+    },
+    {
+      "name": "factory-testing.png",
+      "sourceBytes": 89364,
+      "bytes": 39384,
+      "width": 276,
+      "height": 307,
+      "sourceWidth": 276,
+      "sourceHeight": 307,
+      "settings": {
+        "palette": true,
+        "quality": 100,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "374db954feda1906a82797adab070f067ec4c7cf755f930188e165b276f59e79",
+      "sha256": "3a11320268e525c2b91ee5286dff3d3439c0216df9fdd9e2b6777c88e56dc5f1",
+      "delivery": {
+        "name": "factory-testing.webp",
+        "bytes": 16158,
+        "quality": 95,
+        "sha256": "d9b6b0613b489aa3c8a5d3274e7d6cb3909ea33dbc26b1f0b2ad2fa90da2d9e4"
+      }
+    },
+    {
+      "name": "scene-entry.jpg",
+      "sourceBytes": 63798,
+      "bytes": 63798,
+      "width": 929,
+      "height": 397,
+      "sourceWidth": 929,
+      "sourceHeight": 397,
+      "settings": null,
+      "sourceSha256": "f7b9939f0fa7e2936cfb4fc342dbee9166cfe8eca723b8ea2bcc69ca236ce1fc",
+      "sha256": "f7b9939f0fa7e2936cfb4fc342dbee9166cfe8eca723b8ea2bcc69ca236ce1fc"
+    },
+    {
+      "name": "product-multi.png",
+      "sourceBytes": 1322907,
+      "bytes": 394279,
+      "width": 1500,
+      "height": 1500,
+      "sourceWidth": 1500,
+      "sourceHeight": 1500,
+      "settings": {
+        "palette": true,
+        "quality": 60,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "af98c3d7b2820dac08ac446e143ec67a8293d787d83a26b48747bff76c367767",
+      "sha256": "ae94733fd47157c65dd5031ab2e3ef9ce795e5ef2b327552313c0cd87e3d5a2e",
+      "delivery": {
+        "name": "product-multi.webp",
+        "bytes": 290678,
+        "quality": 95,
+        "sha256": "bc6abbfb0a852c1523d1a3d5a1b5c5526a8e3cfe476631be69eafa1ed3df9378"
+      }
+    },
+    {
+      "name": "hero-courtyard.png",
+      "sourceBytes": 2630117,
+      "bytes": 302082,
+      "width": 1642,
+      "height": 958,
+      "sourceWidth": 1642,
+      "sourceHeight": 958,
+      "settings": {
+        "palette": true,
+        "colours": 128,
+        "compressionLevel": 9,
+        "effort": 10
+      },
+      "sourceSha256": "9fbc80be1bae491778fde9d9df09452663c8587726a5a130de8cf51865378d27",
+      "sha256": "4b72a4c0514a979743fb76784dab76b2c32d0362b289e32fc174b696ab406ae5",
+      "delivery": {
+        "name": "hero-courtyard.webp",
+        "bytes": 524374,
+        "quality": 95,
+        "sha256": "89b5b94190c1b8c202974f9e2ec8985a368db56eb62cfd6c63a52db42b2d76b0"
+      }
+    },
+    {
+      "name": "scene-patio.jpg",
+      "sourceBytes": 159519,
+      "bytes": 159519,
+      "width": 927,
+      "height": 634,
+      "sourceWidth": 927,
+      "sourceHeight": 634,
+      "settings": null,
+      "sourceSha256": "859ee2fe13c7fc41128838a407e28c8cf4bd3828ad8f7c0b3be8f5643db6d806",
+      "sha256": "859ee2fe13c7fc41128838a407e28c8cf4bd3828ad8f7c0b3be8f5643db6d806"
+    }
+  ]
+}

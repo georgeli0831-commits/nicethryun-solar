@@ -1,0 +1,9 @@
+---
+import StaticPage from '../../components/StaticPage.astro';
+import products from '../../data/products.json';
+export function getStaticPaths() {
+  return products.map(product => ({ params: { slug: product.id }, props: { product } }));
+}
+const { product } = Astro.props;
+---
+<StaticPage page="renderProduct" id={product.id} description={product.desc} />

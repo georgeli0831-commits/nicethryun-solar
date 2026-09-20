@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { createTemplates } from '../lib/templates.js';
+interface Props { page: string; id?: string; title?: string; description?: string }
+const { page, id, title, description } = Astro.props;
+const templates = createTemplates();
+const html = page === 'renderCatalogue' ? templates.renderCatalogue(new URLSearchParams()) : templates[page](id);
+const heading = html.match(/<h1(?: [^>]*)?>([\s\S]*?)<\/h1>/)?.[1]?.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+---
+<BaseLayout title={title || `NICETHRYUN — ${heading || 'Solar security lighting'}`} description={description}>
+  <Fragment set:html={html} />
+</BaseLayout>

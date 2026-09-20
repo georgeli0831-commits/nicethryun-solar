@@ -1,0 +1,15 @@
+---
+import { normalizeLinks } from '../lib/links.js';
+import { iconify } from '../lib/icons.js';
+const html = String.raw`  <div class="compare-tray" id="compare-tray" hidden></div>
+  <dialog id="quote-dialog" class="quote-dialog" aria-labelledby="quote-heading"><div id="quote-content"></div></dialog>
+  <dialog id="compare-dialog" class="wide-dialog" aria-labelledby="compare-heading"><div id="compare-content"></div></dialog>
+  <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-heading"><div id="info-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="noscript">Please enable JavaScript to use the product catalogue and quotation list.</p></noscript>
+
+
+
+`;
+---
+<Fragment set:html={iconify(normalizeLinks(html))} />

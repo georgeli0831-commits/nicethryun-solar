@@ -1,0 +1,47 @@
+---
+import { site } from '../config/site.mjs';
+import { langTag, publicRegions, translatePath } from '../i18n';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalPath?: string;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+  image = site.defaultImage,
+  canonicalPath = Astro.url.pathname,
+} = Astro.props;
+const canonical = new URL(canonicalPath, site.domain).href;
+const ogImage = new URL(image, site.domain).href;
+const alternates = publicRegions.map((region) => ({
+  tag: langTag[region],
+  href: new URL(translatePath(canonicalPath, 'en', region), site.domain).href,
+}));
+const organization = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: site.brand,
+  url: site.domain,
+}).replace(/</g, '\\u003c');
+---
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{alternates.map((alternate) => <link rel="alternate" hreflang={alternate.tag} href={alternate.href} />)}
+<link rel="alternate" hreflang="x-default" href={canonical} />
+<meta property="og:site_name" content={site.brand} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content={ogImage} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={ogImage} />
+<script type="application/ld+json" set:html={organization} />
