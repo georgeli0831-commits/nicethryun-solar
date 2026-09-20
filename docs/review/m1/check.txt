@@ -1,0 +1,13 @@
+
+> nicethryun-solar@0.1.0 check
+> astro check
+
+14:31:39 [content] Syncing content
+14:31:39 [content] Synced content
+14:31:39 [types] Generated 21ms
+14:31:39 [check] Getting diagnostics for Astro files in /Users/lijiaming/Projects/nicethryun-solar...
+Result (39 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+

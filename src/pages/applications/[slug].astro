@@ -1,0 +1,9 @@
+---
+import StaticPage from '../../components/StaticPage.astro';
+import applications from '../../data/applications.json';
+export function getStaticPaths() {
+  return [...Object.keys(applications).map(id => ({ params: { slug: id === 'entryway' ? 'entry' : id }, props: { id } })), { params: { slug: 'patio' }, props: { id: 'garden' } }];
+}
+const { id } = Astro.props;
+---
+<StaticPage page="renderApplication" id={id} description={applications[id].intro} />

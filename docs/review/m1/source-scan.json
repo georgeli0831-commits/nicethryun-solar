@@ -1,0 +1,42 @@
+[
+  {
+    "name": "secret_or_path",
+    "scope": "src/",
+    "regex": "VITE_.*(KEY|SECRET|TOKEN)|/Users/|password\\s*[:=]|sk-ant-|sk-proj-|ANTHROPIC_API_KEY|OPENAI_API_KEY",
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "dangerous_or_network",
+    "scope": "src/",
+    "regex": "eval\\(|dangerouslySetInnerHTML|\\bfetch\\(|XMLHttpRequest|\\b(INSERT INTO|DELETE FROM|SELECT .*FROM)\\b",
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "raw_html_sinks",
+    "scope": "src/",
+    "regex": "innerHTML|outerHTML|set:html",
+    "exitCode": 0,
+    "stdout": "src/scripts/site.js:234:  document.getElementById(\"home-products\").innerHTML =\nsrc/scripts/site.js:245:  panel.innerHTML = applicationPanel(homeApp);\nsrc/scripts/site.js:257:  main.innerHTML = templates().renderCatalogue(q);\nsrc/scripts/site.js:264:  document.getElementById(\"catalogue-results\").innerHTML = result.html;\nsrc/scripts/site.js:268:  main.innerHTML = templates().renderInquiry();\nsrc/scripts/site.js:273:  main.innerHTML = templates().renderSuccess();\nsrc/scripts/site.js:278:  document.getElementById(\"quote-content\").innerHTML =\nsrc/scripts/site.js:284:  document.getElementById(\"compare-content\").innerHTML =\nsrc/scripts/site.js:329:  tray.innerHTML = `${icon(\"columns-3\")}<b>${compare.size} / 3 products selected</b><button data-action=\"clear-compare\">Clear selection</button><button class=\"btn btn-amber\" data-action=\"compare\" ${compare.size < 2 ? \"disabled\" : \"\"}>Compare products ${icon(\"arrow-right\")}</button><button class=\"icon-button\" data-action=\"clear-compare\" aria-label=\"Clear comparison\">${icon(\"x\")}</button>`;\nsrc/scripts/site.js:454:  document.getElementById(\"info-content\").innerHTML =\nsrc/scripts/site.js:518:    document.getElementById(\"detail-image\").innerHTML =\nsrc/scripts/site.js:812:  if (summary) summary.outerHTML = inquirySummary();\nsrc/components/Dialogs.astro:15:<Fragment set:html={iconify(normalizeLinks(html))} />\nsrc/components/Header.astro:26:<Fragment set:html={iconify(normalizeLinks(html))} />\nsrc/components/StaticPage.astro:11:  <Fragment set:html={html} />\nsrc/components/Footer.astro:11:<Fragment set:html={iconify(normalizeLinks(html))} />\nsrc/components/SEO.astro:47:<script type=\"application/ld+json\" set:html={organization} />\n",
+    "stderr": ""
+  },
+  {
+    "name": "typescript_bypasses",
+    "scope": "src/",
+    "regex": "@ts-ignore|as unknown as|:\\s*any\\b|as\\s+any\\b",
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "prohibited_runtime_or_brand",
+    "scope": "src/",
+    "regex": "react|zelmo|#f2c200|#1f2328|prerender\\s*=\\s*false|astro:assets|astro:transitions|defineAction|server:defer|client:|define:vars",
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "verification": "Conditional VM lifecycle simulation of current site.js; no real browser or DOM rendering; closeTransientUI/initializePage are stubbed to isolate storage restoration.",
+  "rawOutput": [
+    "B saved: {\"cart\":[{\"id\":\"solar-flood\",\"qty\":200}],\"draft\":{\"email\":\"qa@example.test\"}}",
+    "Restored A state: {\"cart\":[{\"id\":\"solar-flood\",\"qty\":200}],\"draft\":{\"email\":\"qa@example.test\"},\"compare\":[\"solar-flood\"]}",
+    "After restored A leaves: {\"cart\":[{\"id\":\"solar-flood\",\"qty\":200}],\"draft\":{\"email\":\"qa@example.test\"}}",
+    "PASS: no stale overwrite"
+  ],
+  "passed": true
+}

@@ -1,0 +1,335 @@
+{
+  "generatedAt": "2026-09-20T06:32:29.154Z",
+  "target": "http://127.0.0.1:4399",
+  "preset": "desktop",
+  "minimumPerformance": 90,
+  "minimumObservedPerformance": 99,
+  "passed": true,
+  "failures": [],
+  "routes": [
+    {
+      "route": "/",
+      "performance": 99,
+      "accessibility": 97,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 282.1995,
+      "lcpMs": 982.1995000000001,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 1102499,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/home.json",
+        "html": "lighthouse/home.html"
+      }
+    },
+    {
+      "route": "/products/",
+      "performance": 100,
+      "accessibility": 93,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 286.1699,
+      "lcpMs": 326.1699,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 765742,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/products.json",
+        "html": "lighthouse/products.html"
+      }
+    },
+    {
+      "route": "/products/solar-flood/",
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 283.8119,
+      "lcpMs": 963.8118999999999,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 1126008,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/products-solar-flood.json",
+        "html": "lighthouse/products-solar-flood.html"
+      }
+    },
+    {
+      "route": "/products/split-panel/",
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 285.9358,
+      "lcpMs": 461.9358,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 655317,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/products-split-panel.json",
+        "html": "lighthouse/products-split-panel.html"
+      }
+    },
+    {
+      "route": "/products/multi-head/",
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 286.1526,
+      "lcpMs": 662.1526000000001,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 779308,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/products-multi-head.json",
+        "html": "lighthouse/products-multi-head.html"
+      }
+    },
+    {
+      "route": "/products/compact-wall/",
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 286.3995,
+      "lcpMs": 421.3995,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 595145,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/products-compact-wall.json",
+        "html": "lighthouse/products-compact-wall.html"
+      }
+    },
+    {
+      "route": "/products/slim-wall/",
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 285.6395,
+      "lcpMs": 421.6395,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 595154,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/products-slim-wall.json",
+        "html": "lighthouse/products-slim-wall.html"
+      }
+    },
+    {
+      "route": "/products/garden-spot/",
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 286.3139,
+      "lcpMs": 582.3138999999999,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 764712,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/products-garden-spot.json",
+        "html": "lighthouse/products-garden-spot.html"
+      }
+    },
+    {
+      "route": "/applications/",
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 286.3097,
+      "lcpMs": 922.3097,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 1049951,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/applications.json",
+        "html": "lighthouse/applications.html"
+      }
+    },
+    {
+      "route": "/applications/entry/",
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 285.7424,
+      "lcpMs": 401.7424,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 558261,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/applications-entry.json",
+        "html": "lighthouse/applications-entry.html"
+      }
+    },
+    {
+      "route": "/applications/driveway/",
+      "performance": 99,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 285.5456,
+      "lcpMs": 941.5455999999999,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 1049906,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/applications-driveway.json",
+        "html": "lighthouse/applications-driveway.html"
+      }
+    },
+    {
+      "route": "/applications/perimeter/",
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 281.9892,
+      "lcpMs": 541.9892,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 643834,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/applications-perimeter.json",
+        "html": "lighthouse/applications-perimeter.html"
+      }
+    },
+    {
+      "route": "/applications/garden/",
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 286.1268,
+      "lcpMs": 462.1268,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 310478,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/applications-garden.json",
+        "html": "lighthouse/applications-garden.html"
+      }
+    },
+    {
+      "route": "/applications/patio/",
+      "performance": 100,
+      "accessibility": 96,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 282.225,
+      "lcpMs": 462.225,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 310480,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/applications-patio.json",
+        "html": "lighthouse/applications-patio.html"
+      }
+    },
+    {
+      "route": "/manufacturing/",
+      "performance": 100,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 286.0971,
+      "lcpMs": 342.0971,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 122088,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/manufacturing.json",
+        "html": "lighthouse/manufacturing.html"
+      }
+    },
+    {
+      "route": "/oem/",
+      "performance": 100,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 286.4115,
+      "lcpMs": 322.4115,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 80468,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/oem.json",
+        "html": "lighthouse/oem.html"
+      }
+    },
+    {
+      "route": "/resources/",
+      "performance": 100,
+      "accessibility": 95,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 286.4237,
+      "lcpMs": 286.4237,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 39903,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/resources.json",
+        "html": "lighthouse/resources.html"
+      }
+    },
+    {
+      "route": "/inquiry/",
+      "performance": 100,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 289.548,
+      "lcpMs": 289.548,
+      "cls": 0,
+      "tbtMs": 0,
+      "transferredBytes": 39629,
+      "runtimeError": null,
+      "warnings": [],
+      "reports": {
+        "json": "lighthouse/inquiry.json",
+        "html": "lighthouse/inquiry.html"
+      }
+    }
+  ]
+}

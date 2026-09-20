@@ -1,0 +1,12 @@
+
+> nicethryun-solar@0.1.0 qa:integrity
+> node scripts/check-migration.mjs
+
+{
+  "passed": true,
+  "routes": 18,
+  "originalImages": 16,
+  "pngByteLimit": 400000,
+  "sourceDataAndCssCompared": true,
+  "resources": 3
+}

@@ -1,0 +1,7 @@
+# Preserve machine-produced evidence byte-for-byte, including tool whitespace.
+docs/review/m1/** -whitespace
+# Preserve the approved demo CSS byte-for-byte (including its final blank line).
+src/styles/global.css -whitespace
+# Large machine reports are review attachments, not implementation source.
+docs/review/m1/lighthouse/** linguist-generated=true
+docs/review/m1/screenshots/** linguist-generated=true

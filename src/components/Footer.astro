@@ -1,0 +1,11 @@
+---
+import { normalizeLinks } from '../lib/links.js';
+import { iconify } from '../lib/icons.js';
+const html = String.raw`
+  <footer class="site-footer">
+    <div class="footer-top"><div><a class="wordmark" href="#/">NICETHRYUN<span class="brand-dot">.</span></a><p>Light the space.<br>Build your business.</p><span class="footer-origin">Solar security lighting · China</span></div><div><h3>Find your light</h3><a href="#/products?family=sensor">Motion sensor lights</a><a href="#/products?family=flood">Solar floodlights</a><a href="#/products?family=garden">Garden spotlights</a><a href="#/applications/driveway">Applications</a></div><div><h3>Build with us</h3><a href="#/manufacturing">Manufacturing & quality</a><a href="#/oem">OEM / ODM cooperation</a><a href="#/resources">Buyer resources</a><a href="#/inquiry">Start a quotation brief <i data-lucide="arrow-up-right"></i></a></div><div class="footer-invitation"><span class="eyebrow">YOUR NEXT RANGE STARTS HERE</span><p>A product list or a project idea.<br>Both are a good place to start.</p><button class="btn btn-outline-light" data-action="quote">Build your quote list <i data-lucide="arrow-right"></i></button></div></div>
+    <div class="footer-bottom"><span>© 2026 NICETHRYUN · B2B website concept</span><button class="text-button" data-action="source-note">Image & information notes</button><span>EN / International</span></div>
+  </footer>
+`;
+---
+<Fragment set:html={iconify(normalizeLinks(html))} />

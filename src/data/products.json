@@ -1,0 +1,181 @@
+[
+  {
+    "id": "multi-head",
+    "name": "Multi-head sensor light",
+    "family": "sensor",
+    "type": "multi",
+    "image": "product-multi.png",
+    "detail": "product-multi-detail.png",
+    "crop": true,
+    "tag": "Motion sensor",
+    "panel": "Integrated solar",
+    "mount": "Wall mounting",
+    "apps": [
+      "entryway",
+      "driveway",
+      "perimeter"
+    ],
+    "short": "Adjustable heads · PIR motion sensor",
+    "desc": "A flexible wall-light format for entrances, driveways and boundary walls. Adjustable lamp heads help direct light toward different parts of the approach.",
+    "features": [
+      "Three adjustable light heads",
+      "Integrated solar panel",
+      "PIR motion sensor",
+      "Wall-mounted format"
+    ],
+    "consider": "Choose an exposed wall position with useful daylight. Confirm detection coverage and the chosen operating mode before ordering.",
+    "questions": [
+      "Required light output and illuminated area",
+      "Sensor range, angle and operating modes",
+      "Battery capacity, service access and winter runtime"
+    ],
+    "source": "Solar catalogue, page 7"
+  },
+  {
+    "id": "split-panel",
+    "name": "Split-panel security light",
+    "family": "sensor",
+    "type": "split",
+    "image": "product-split.png",
+    "detail": "product-split-detail.png",
+    "tag": "Separate panel",
+    "panel": "Split solar",
+    "mount": "Wall mounting",
+    "apps": [
+      "entryway",
+      "driveway",
+      "perimeter"
+    ],
+    "short": "Separate panel · Flexible placement",
+    "desc": "Separate the panel position from the light position. A useful starting point when an entrance is shaded but a nearby wall or roof edge receives more sunlight.",
+    "features": [
+      "Separate solar panel",
+      "Adjustable multi-head format",
+      "Motion sensor",
+      "Remote shown in reference set"
+    ],
+    "consider": "Plan the panel position and cable route together. Confirm cable length, connector protection and the complete accessory list for your configuration.",
+    "questions": [
+      "Panel location and required cable length",
+      "Battery and panel pairing for the chosen mode",
+      "Cable routing and supplied mounting accessories"
+    ],
+    "source": "Solar catalogue, page 8"
+  },
+  {
+    "id": "compact-wall",
+    "name": "Compact wall sensor",
+    "family": "sensor",
+    "type": "compact",
+    "image": "product-compact.png",
+    "tag": "Compact format",
+    "panel": "Integrated solar",
+    "mount": "Wall mounting",
+    "apps": [
+      "entryway",
+      "perimeter"
+    ],
+    "short": "Wide-face design · Compact wall format",
+    "desc": "A compact integrated format for doorways, side passages and residential boundary walls. A straightforward family to consider for a focused retail or distributor range.",
+    "features": [
+      "Compact one-piece housing",
+      "Integrated solar panel",
+      "Front motion sensor",
+      "Multiple illuminated faces"
+    ],
+    "consider": "Check mounting height and nearby obstructions. Final output, detection settings and enclosure rating depend on the selected model.",
+    "questions": [
+      "Mounting height and sensor behavior",
+      "Retail packaging and multi-pack requirements",
+      "Selected-model output and battery specification"
+    ],
+    "source": "Solar catalogue, page 12"
+  },
+  {
+    "id": "slim-wall",
+    "name": "Slim wall sensor light",
+    "family": "sensor",
+    "type": "compact",
+    "image": "product-slim.png",
+    "tag": "Wall lighting",
+    "panel": "Integrated solar",
+    "mount": "Wall mounting",
+    "apps": [
+      "entryway",
+      "perimeter"
+    ],
+    "short": "Low-profile housing · Integrated panel",
+    "desc": "A low-profile wall-mounted light for side entrances and paths alongside a building. Its compact form supports a smaller, easy-to-understand assortment.",
+    "features": [
+      "Slim rectangular housing",
+      "Integrated panel",
+      "Wall-mount format",
+      "Sensor-light product family"
+    ],
+    "consider": "Review the exact configuration and mounting drawing during sample approval. A slim form alone does not indicate light output or coverage.",
+    "questions": [
+      "Intended illuminated area",
+      "Requested control modes and light color",
+      "Branding, labeling and carton requirements"
+    ],
+    "source": "Solar catalogue, page 13"
+  },
+  {
+    "id": "solar-flood",
+    "name": "Split solar floodlight",
+    "family": "flood",
+    "type": "flood",
+    "image": "product-flood.jpg",
+    "tag": "Area lighting",
+    "panel": "Split solar",
+    "mount": "Bracket mounting",
+    "apps": [
+      "driveway",
+      "perimeter"
+    ],
+    "short": "Separate panel · Adjustable bracket",
+    "desc": "A separate-panel floodlight format for yards and perimeter areas. Begin with the mounting position, required coverage and daily operating schedule to define the right configuration.",
+    "features": [
+      "Separate rectangular panel",
+      "Adjustable light bracket",
+      "Sensor shown in reference set",
+      "Remote shown in reference set"
+    ],
+    "consider": "For larger areas, use a lighting plan. Confirm usable lumens, beam angle, mounting height and runtime together rather than selecting by headline wattage.",
+    "questions": [
+      "Area dimensions and mounting height",
+      "Required runtime and dimming schedule",
+      "Usable light output and supporting test data"
+    ],
+    "source": "Solar catalogue, page 9"
+  },
+  {
+    "id": "garden-spot",
+    "name": "Solar garden spotlight",
+    "family": "garden",
+    "type": "spot",
+    "image": "product-spot.jpg",
+    "tag": "Landscape lighting",
+    "panel": "Integrated solar",
+    "mount": "Ground stake",
+    "apps": [
+      "garden",
+      "entryway"
+    ],
+    "short": "Ground stake · Directional accent light",
+    "desc": "A complementary landscape family for planting, garden paths and feature lighting. Pair it with motion-sensor wall lights when building a broader outdoor range.",
+    "features": [
+      "Ground-stake format",
+      "Directional spotlight head",
+      "Integrated panel",
+      "Landscape-lighting family"
+    ],
+    "consider": "Treat accent lighting separately from security coverage. Check ground conditions, planting growth and panel exposure at the chosen location.",
+    "questions": [
+      "Accent lighting or path guidance requirement",
+      "Preferred light color and evening schedule",
+      "Pack size, packaging and seasonal range planning"
+    ],
+    "source": "Solar catalogue, page 20"
+  }
+]
