@@ -16,7 +16,7 @@ export const site = {
   },
   // Web3Forms access key (public by design). null keeps the inquiry in
   // local preview mode: brief saved in the browser and downloadable, nothing sent.
-  web3formsKey: null,
+  web3formsKey: '7dbce52c-c270-49f8-b7c0-f2244cf9b57e',
   // Google Tag Manager container (GTM-XXXXXXX) and Meta Pixel ID. null = not loaded.
   // Do not add Meta tags inside GTM as well, or events are counted twice.
   gtmId: null,
