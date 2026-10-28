@@ -10,8 +10,8 @@ export const site = {
   // Contact channels: null hides the channel everywhere (footer, floating button).
   // whatsapp: digits only with country code, e.g. '8613500000000'.
   contact: {
-    whatsapp: null,
-    phone: null,
+    whatsapp: '8613710643008',
+    phone: '+86 137 1064 3008',
     email: null,
   },
   // Web3Forms access key (public by design). null keeps the inquiry in
