@@ -12,7 +12,7 @@ export const site = {
   contact: {
     whatsapp: '8613710643008',
     phone: '+86 137 1064 3008',
-    email: null,
+    email: 'contact@nicethryun-solar.com',
   },
   // Web3Forms access key (public by design). null keeps the inquiry in
   // local preview mode: brief saved in the browser and downloadable, nothing sent.
