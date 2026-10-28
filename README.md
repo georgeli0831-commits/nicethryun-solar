@@ -39,7 +39,7 @@ npm run preview -- --host 127.0.0.1 --port 4399
 | `public/images/` | 16 张原名图片；PNG <=400KB；另有从原图生成的高质量 WebP，用于页面显示，原尺寸不变 |
 | `src/data/image-paths.json` | 原始文件名到实际显示文件的映射 |
 | `public/downloads/` | `oem-brief.txt`、`selection-checklist.txt`、`range-overview.csv` |
-| `src/config/site.mjs` | 唯一域名占位常量、默认 SEO 信息 |
+| `src/config/site.mjs` | 正式域名、默认 SEO 信息、联系渠道、询盘表单 key、GTM / 像素 ID |
 | `docs/review/m1/` | 逐路由截图、交互记录、Lighthouse 和图片清单 |
 
 ## 新增产品族
@@ -69,7 +69,7 @@ npm run qa:lighthouse
 
 ## Cloudflare Pages 构建约定
 
-本仓库已经输出静态站点，不需要 adapter 或服务端 Functions。后续接入时使用：构建命令 `npm run build`，输出目录 `dist`，Node.js 22.12+。M1 未接入 Cloudflare、未部署、未配置域名。
+本仓库已经输出静态站点，不需要 adapter 或服务端 Functions。后续接入时使用：构建命令 `npm run build`，输出目录 `dist`，Node.js 22.12+。已接入 Cloudflare Pages（项目 nicethryun-solar，main 自动部署，PR 自动出预览），正式域名 https://nicethryun-solar.com 。
 
 ## 依赖审计
 
@@ -77,7 +77,9 @@ npm run qa:lighthouse
 
 ## 待办
 
-- `TODO: form endpoint`：为 inquiry / OEM / RFQ 接入经确认的后端；当前仅浏览器校验、草稿、toast 和文件导出，附件不会上传。
+- 询盘：`src/config/site.mjs` 的 `web3formsKey` 填入后，主询盘表单经 Web3Forms 发送，成功跳 `/inquiry/thanks/`（noindex、不进 sitemap）并推一次 `generate_lead`；为 `null` 时保持本地预览（草稿 + 导出）。快速询盘和 OEM 表单只负责把内容带进主表单。附件不上传。
+- 联系渠道 `contact.whatsapp / phone / email`、`gtmId`、`metaPixelId`：填了才在页脚、WhatsApp 悬浮按钮和 `<head>` 里出现。Meta 像素直装在 BaseLayout，不要在 GTM 里重复加。
+- 追踪事件名（GA4 / Google Ads / Meta 共用，不要改）：`generate_lead`、`whatsapp_click`、`contact_click`，见 `src/scripts/tracking.js`。
 - 域名确定后替换 `src/config/site.mjs` 的 `https://nicethryun-solar.example`；canonical、OG、sitemap、robots 共用这个常量。
 - Cloudflare Pages 项目、构建接入与发布验证。
 - 多语言文案、路由和语言切换；目前仅英文。

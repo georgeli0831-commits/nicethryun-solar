@@ -12,3 +12,6 @@
 .summary-row>.multi-crop{width:66px;flex:0 0 66px}
 .summary-row>.multi-crop img{margin:0}
 
+.footer-contact{display:grid;gap:6px;margin-top:17px;font-size:12px}.footer-contact a{display:flex;align-items:center;gap:8px}
+.wa-fab{position:fixed;right:20px;bottom:22px;z-index:44;display:flex;align-items:center;gap:8px;background:#1f9d55;color:#fff;border-radius:999px;padding:12px 18px;font-size:13px;font-weight:700;box-shadow:0 8px 24px #0003}.wa-fab:hover{background:#18874a}
+@media (max-width:760px){.wa-fab{right:14px;bottom:14px;padding:13px}.wa-fab span{display:none}}

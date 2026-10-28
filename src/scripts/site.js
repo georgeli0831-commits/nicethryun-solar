@@ -7,7 +7,9 @@ import {
 import { icon } from "../lib/icons.js";
 import { routeHref } from "../lib/links.js";
 import resources from "../data/resources.json";
-/* Approved prototype interactions; no network form submission. */
+import { inquiryLive } from "../config/site.mjs";
+import { sendInquiry } from "./tracking.js";
+/* Approved prototype interactions. The inquiry is sent only when a form key is configured. */
 const storageKey = "nicethryun-prototype-v1";
 let cart = [];
 let draft = {};
@@ -336,6 +338,7 @@ function formValues(form) {
   const data = Object.fromEntries(new FormData(form));
   delete data.attachments;
   delete data.consent;
+  delete data.botcheck;
   return data;
 }
 function saveInquiryForm() {
@@ -346,7 +349,9 @@ function saveInquiryForm() {
 function composeBrief() {
   return {
     brand: "NICETHRYUN",
-    type: "B2B quotation request — local preview",
+    type: inquiryLive
+      ? "B2B quotation request"
+      : "B2B quotation request — local preview",
     createdAt: new Date().toISOString(),
     company: draft.company,
     contact: draft.contact,
@@ -366,7 +371,9 @@ function composeBrief() {
     })),
     requirements: draft.message || "",
     attachmentNames: draft.attachmentNames || [],
-    note: "This brief has not been sent. Share it with your supplier and attach the original files. Pricing, MOQ, specifications, documents and delivery terms require confirmation.",
+    note: inquiryLive
+      ? "Pricing, MOQ, specifications, documents and delivery terms require confirmation."
+      : "This brief has not been sent. Share it with your supplier and attach the original files. Pricing, MOQ, specifications, documents and delivery terms require confirmation.",
   };
 }
 function download(name, content, type = "text/plain;charset=utf-8") {
@@ -703,8 +710,8 @@ document.addEventListener("change", (e) => {
     persist();
   }
 });
-// TODO: form endpoint — quick inquiry, OEM and RFQ keep the demo's local-only flow.
-document.addEventListener("submit", (e) => {
+// Quick inquiry and OEM forms feed the main inquiry form, which is the only one sent.
+document.addEventListener("submit", async (e) => {
   if (e.target.id === "quick-inquiry") {
     e.preventDefault();
     draft = { ...draft, ...formValues(e.target) };
@@ -736,7 +743,22 @@ document.addEventListener("submit", (e) => {
     if (attached.length) draft.attachmentNames = attached;
     persist();
     lastBrief = composeBrief();
-    go("/inquiry/ready");
+    if (!inquiryLive) {
+      go("/inquiry/ready");
+      return;
+    }
+    const button = e.target.querySelector('button[type="submit"]');
+    button.disabled = true;
+    try {
+      await sendInquiry(lastBrief, {
+        botcheck: e.target.elements.namedItem("botcheck")?.checked ?? false,
+      });
+      persist();
+      location.assign("/inquiry/thanks/");
+    } catch {
+      button.disabled = false;
+      toast("Sending failed. Please try again, or contact us directly.");
+    }
   }
 });
 document
