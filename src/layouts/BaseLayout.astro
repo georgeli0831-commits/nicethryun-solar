@@ -8,7 +8,7 @@ import { icon } from '../lib/icons.js';
 import '../styles/global.css';
 interface Props { title?: string; description?: string; noindex?: boolean; thanks?: boolean }
 const { title = 'NICETHRYUN — Solar security lighting for your business', description = 'Explore NICETHRYUN solar security lighting for distributors, OEM brands and project buyers. Compare product families and build a quotation brief.', noindex = false, thanks = false } = Astro.props;
-const { gtmId, metaPixelId } = site;
+const { gtmId, metaPixelId, facebookDomainVerification } = site;
 const whatsapp = site.contact.whatsapp;
 ---
 <!doctype html>
@@ -17,6 +17,7 @@ const whatsapp = site.contact.whatsapp;
     <meta name="theme-color" content="#092b30" />
     <SEO title={title} description={description} />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
+    {facebookDomainVerification && <meta name="facebook-domain-verification" content={facebookDomainVerification} />}
     <link rel="icon" href="data:," />
     {gtmId && (
       <script

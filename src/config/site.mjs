@@ -12,15 +12,17 @@ export const site = {
   contact: {
     whatsapp: '8613710643008',
     phone: '+86 137 1064 3008',
-    email: null,
+    email: 'contact@nicethryun-solar.com',
   },
   // Web3Forms access key (public by design). null keeps the inquiry in
   // local preview mode: brief saved in the browser and downloadable, nothing sent.
-  web3formsKey: null,
+  web3formsKey: '7dbce52c-c270-49f8-b7c0-f2244cf9b57e',
   // Google Tag Manager container (GTM-XXXXXXX) and Meta Pixel ID. null = not loaded.
   // Do not add Meta tags inside GTM as well, or events are counted twice.
-  gtmId: null,
-  metaPixelId: null,
+  gtmId: 'GTM-NPJ3C77L',
+  metaPixelId: '1456949216538574',
+  // Meta Business domain verification (BM 广东六豪明隆, domain asset 1809519973805827).
+  facebookDomainVerification: 'm7r3rdewsv5dub1609pw556pbf951m',
 };
 
 export const inquiryLive = Boolean(site.web3formsKey);
