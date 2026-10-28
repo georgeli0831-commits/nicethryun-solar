@@ -20,7 +20,9 @@ export const site = {
   // Google Tag Manager container (GTM-XXXXXXX) and Meta Pixel ID. null = not loaded.
   // Do not add Meta tags inside GTM as well, or events are counted twice.
   gtmId: null,
-  metaPixelId: null,
+  metaPixelId: '1456949216538574',
+  // Meta Business domain verification (BM 广东六豪明隆, domain asset 1809519973805827).
+  facebookDomainVerification: 'm7r3rdewsv5dub1609pw556pbf951m',
 };
 
 export const inquiryLive = Boolean(site.web3formsKey);
