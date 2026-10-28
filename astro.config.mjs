@@ -7,5 +7,10 @@ export default defineConfig({
   site: SITE_URL,
   output: 'static',
   trailingSlash: 'always',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Conversion page stays out of search (also noindex in its layout).
+      filter: (page) => !page.includes('/inquiry/thanks/'),
+    }),
+  ],
 });

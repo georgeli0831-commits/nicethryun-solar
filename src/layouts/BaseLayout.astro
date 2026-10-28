@@ -3,22 +3,53 @@ import SEO from '../components/SEO.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Dialogs from '../components/Dialogs.astro';
+import { site } from '../config/site.mjs';
+import { icon } from '../lib/icons.js';
 import '../styles/global.css';
-interface Props { title?: string; description?: string }
-const { title = 'NICETHRYUN — Solar security lighting for your business', description = 'Explore NICETHRYUN solar security lighting for distributors, OEM brands and project buyers. Compare product families and build a quotation brief.' } = Astro.props;
+interface Props { title?: string; description?: string; noindex?: boolean; thanks?: boolean }
+const { title = 'NICETHRYUN — Solar security lighting for your business', description = 'Explore NICETHRYUN solar security lighting for distributors, OEM brands and project buyers. Compare product families and build a quotation brief.', noindex = false, thanks = false } = Astro.props;
+const { gtmId, metaPixelId } = site;
+const whatsapp = site.contact.whatsapp;
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta name="theme-color" content="#092b30" />
     <SEO title={title} description={description} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
     <link rel="icon" href="data:," />
+    {gtmId && (
+      <script
+        is:inline
+        set:html={`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtmId}');`}
+      />
+    )}
+    {metaPixelId && (
+      <script
+        is:inline
+        set:html={`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${metaPixelId}');fbq('track','PageView');`}
+      />
+    )}
   </head>
-  <body>
+  <body data-thanks={thanks ? '' : undefined}>
+    {gtmId && (
+      <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    )}
     <Header />
     <main id="main-content" tabindex="-1"><slot /></main>
     <Footer />
     <Dialogs />
+    {whatsapp && (
+      <a
+        class="wa-fab"
+        data-wa-fab
+        href={`https://wa.me/${whatsapp}?text=${encodeURIComponent('Hello NICETHRYUN, I would like a quotation for solar lights.')}`}
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with us on WhatsApp"
+        set:html={`${icon('message-circle')}<span>WhatsApp</span>`}
+      />
+    )}
     <script>import '../scripts/site.js';</script>
   </body>
 </html>
