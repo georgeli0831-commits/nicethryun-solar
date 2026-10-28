@@ -19,7 +19,7 @@ export const site = {
   web3formsKey: '7dbce52c-c270-49f8-b7c0-f2244cf9b57e',
   // Google Tag Manager container (GTM-XXXXXXX) and Meta Pixel ID. null = not loaded.
   // Do not add Meta tags inside GTM as well, or events are counted twice.
-  gtmId: null,
+  gtmId: 'GTM-NPJ3C77L',
   metaPixelId: '1456949216538574',
   // Meta Business domain verification (BM 广东六豪明隆, domain asset 1809519973805827).
   facebookDomainVerification: 'm7r3rdewsv5dub1609pw556pbf951m',
