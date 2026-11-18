@@ -6,7 +6,7 @@ function setup(options={}) {
   let time=0,sequence=0,maxTimers=0;
   const jobs=new Map(),changes=[];
   const playback=createScenePlayback({
-    count:8,interval:6000,...options,now:()=>time,
+    count:8,...options,now:()=>time,
     setTimer(callback,delay){const id=++sequence;jobs.set(id,{callback,at:time+delay});maxTimers=Math.max(maxTimers,jobs.size);return id;},
     clearTimer:id=>jobs.delete(id),onChange:state=>changes.push(state),
   });
@@ -22,27 +22,27 @@ function setup(options={}) {
   return {playback,advance,jobs,changes,get maxTimers(){return maxTimers;}};
 }
 
-test('starts only in view, advances after six seconds and wraps eight scenes',()=>{
+test('starts only in view, advances after two seconds and wraps eight scenes',()=>{
   const s=setup();s.advance(20000);assert.equal(s.playback.getState().index,0);assert.equal(s.jobs.size,0);
-  s.playback.setInView(true);s.advance(5999);assert.equal(s.playback.getState().index,0);
+  s.playback.setInView(true);s.advance(1999);assert.equal(s.playback.getState().index,0);
   s.advance(1);assert.equal(s.playback.getState().index,1);
-  s.advance(42000);assert.equal(s.playback.getState().index,0);assert.equal(s.maxTimers,1);
+  s.advance(14000);assert.equal(s.playback.getState().index,0);assert.equal(s.maxTimers,1);
 });
 
 test('manual selection persists through hover and viewport changes until explicit continue',()=>{
-  const s=setup();s.playback.setInView(true);s.advance(2000);s.playback.select(4);
+  const s=setup();s.playback.setInView(true);s.advance(500);s.playback.select(4);
   s.playback.setHovered(true);s.playback.setInView(false);s.advance(30000);
   s.playback.setHovered(false);s.playback.setInView(true);s.advance(30000);
   assert.equal(s.playback.getState().index,4);assert.equal(s.playback.getState().wantsPlay,false);assert.equal(s.jobs.size,0);
-  s.playback.play();s.advance(5999);assert.equal(s.playback.getState().index,4);
+  s.playback.play();s.advance(1999);assert.equal(s.playback.getState().index,4);
   s.advance(1);assert.equal(s.playback.getState().index,5);
 });
 
 test('overlapping hover and focus blockers preserve the remaining duration',()=>{
-  const s=setup();s.playback.setInView(true);s.advance(2250);s.playback.setHovered(true);
-  assert.equal(s.playback.getState().remaining,3750);s.advance(50000);
+  const s=setup();s.playback.setInView(true);s.advance(750);s.playback.setHovered(true);
+  assert.equal(s.playback.getState().remaining,1250);s.advance(50000);
   s.playback.setFocused(true);s.playback.setHovered(false);assert.equal(s.jobs.size,0);
-  s.playback.setFocused(false);s.advance(3749);assert.equal(s.playback.getState().index,0);
+  s.playback.setFocused(false);s.advance(1249);assert.equal(s.playback.getState().index,0);
   s.advance(1);assert.equal(s.playback.getState().index,1);
 });
 
@@ -50,14 +50,14 @@ test('hidden tab and offscreen module must both recover before playing',()=>{
   const s=setup();s.playback.setInView(true);s.advance(1000);s.playback.setPageVisible(false);s.playback.setInView(false);
   s.advance(60000);assert.equal(s.playback.getState().index,0);
   s.playback.setPageVisible(true);assert.equal(s.jobs.size,0);
-  s.playback.setInView(true);s.advance(5000);assert.equal(s.playback.getState().index,1);
+  s.playback.setInView(true);s.advance(1000);assert.equal(s.playback.getState().index,1);
 });
 
 test('reduced motion is manual by default and live preference changes stop playback',()=>{
   const s=setup({reducedMotion:true});s.playback.setInView(true);s.playback.play();s.advance(20000);
   assert.equal(s.jobs.size,0);assert.equal(s.playback.getState().index,0);
   s.playback.setReducedMotion(false);assert.equal(s.jobs.size,0);
-  s.playback.play();s.advance(6000);assert.equal(s.playback.getState().index,1);
+  s.playback.play();s.advance(2000);assert.equal(s.playback.getState().index,1);
   s.playback.setReducedMotion(true);s.advance(20000);assert.equal(s.playback.getState().index,1);
   s.playback.setReducedMotion(false);assert.equal(s.playback.getState().wantsPlay,false);assert.equal(s.jobs.size,0);
 });
@@ -86,7 +86,7 @@ test('arrow/swipe indices wrap and selecting the current scene also pauses',()=>
 test('a canceled or vertical gesture resumes the user intent without losing elapsed time',()=>{
   const s=setup();s.playback.setInView(true);s.advance(1500);s.playback.setInteracting(true);s.advance(10000);
   assert.equal(s.playback.getState().wantsPlay,true);assert.equal(s.jobs.size,0);
-  s.playback.setInteracting(false);s.advance(4500);assert.equal(s.playback.getState().index,1);
+  s.playback.setInteracting(false);s.advance(500);assert.equal(s.playback.getState().index,1);
 });
 
 test('continue while temporarily blocked waits, and pause remains persistent',()=>{
