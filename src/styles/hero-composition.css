@@ -27,3 +27,4 @@
  .a-hero-brand-slot{bottom:65px}
 }
 @media(prefers-reduced-motion:reduce){.a-hero-background{transition:none}}
+@media(max-width:760px){.a-hero-poster{transform:scale(.8);transform-origin:center}}
