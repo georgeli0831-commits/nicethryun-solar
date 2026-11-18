@@ -21,6 +21,7 @@ This change adds a market map between the particle hero and the factory photogra
 - Browser: 390px and 320px layouts have no document horizontal overflow. Market controls have 20px primary text and exceed the 44px touch target minimum. Choosing a market pauses the tour; arrow-key selection updates the market and retains the pause.
 - Browser: after Resume, the map runs while the Resume/Pause control retains keyboard focus. A review finding that incorrectly treated the playback control as a focus blocker was fixed before handoff.
 - No production inquiry or WhatsApp message was submitted. Screenshots are browser-layout evidence; no physical iPhone/Safari performance claim is made.
+- Claude's follow-up review requested consistent China highlighting. Mainland and Taiwan geometry now share the same ice-blue treatment; the three target-market routes and source geometry are unchanged.
 
 ## Geographic source
 

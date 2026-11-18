@@ -48,7 +48,7 @@ const labelPosition = (point: { x: number; y: number }) => `--map-x:${point.x / 
       <path class="global-markets__graticule" d={world.graticule} />
       <g class="global-markets__land">
         {world.countries.map(country => <path
-          class:list={['global-markets__country', { 'global-markets__china': String(country.id).padStart(3, '0') === '156' }]}
+          class:list={['global-markets__country', { 'global-markets__china': ['156', '158'].includes(String(country.id).padStart(3, '0')) }]}
           d={country.path}
           data-destination={destinationFor(country.id)}
         />)}

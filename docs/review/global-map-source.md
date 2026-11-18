@@ -29,6 +29,7 @@ Temporary generation libraries are `d3-geo@3.1.1` (ISC) and `shapefile@0.6.6` (B
 - Schema: `{viewBox, sphere, graticule, countries: [{id, name, path}], points: {china, europe, middleEast, australia}}`. Each point is `{x, y}`. All SVG paths are data strings, with no inline script or styles.
 - IDs are strings from `ISO_N3_EH`, preserving leading zeroes; where no three-digit ISO ID exists, `NE-` plus the Natural Earth administrative code provides a stable unique ID.
 - Highlight IDs verified: China `156`, Germany `276`, Australia `036`, Saudi Arabia `682`, United Arab Emirates `784`.
+- The China visual highlight includes Taiwan (`158`), using the same ice-blue fill and outline as the mainland. This presentation grouping does not alter the source geometry or add a separate market destination.
 - Route reference locations are schematic country/region anchors, not factory coordinates, addresses, offices or shipment destinations:
 
 | Key | Longitude, latitude | SVG x, y |
