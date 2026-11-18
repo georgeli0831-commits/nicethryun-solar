@@ -3,10 +3,10 @@
     "label": "Driveway",
     "title": "A clearer arrival, after dark.",
     "intro": "Guide the approach to homes and small premises. Start with the driveway width, wall position and sensor response — then select the product format.",
-    "image": "hero-courtyard.png",
+    "image": "scenes/driveway.png",
     "caption": "A considered welcome. A visible approach.",
     "sub": "Motion-sensor lighting for arrival points and the way home.",
-    "note": "Illustrative application scene",
+    "note": "Application concept, not a completed installation or lighting calculation",
     "match": "multi-head",
     "heading": "Light the approach.",
     "checks": [
@@ -33,10 +33,10 @@
     "label": "Entryway",
     "title": "Make every entrance feel considered.",
     "intro": "Bring light to doors, gates and side entrances. Choose a compact wall format or a separate panel for installations beneath an overhang.",
-    "image": "scene-entry.jpg",
+    "image": "scenes/passerby.png",
     "caption": "A brighter welcome starts at the door.",
     "sub": "Wall-mounted lighting for entrances and everyday access.",
-    "note": "Application image from supplied catalogue",
+    "note": "Application concept, not a completed installation or lighting calculation",
     "match": "compact-wall",
     "heading": "Make the first step clear.",
     "checks": [
@@ -63,11 +63,11 @@
     "label": "Perimeter",
     "title": "Bring clarity to the boundary.",
     "intro": "Boundary walls and side passages need a planned sequence of light. Combine mounting positions, daytime exposure and operating requirements in one project brief.",
-    "image": "scene-perimeter.jpg",
+    "image": "scenes/security.png",
     "caption": "Consider the whole route.",
     "sub": "A project begins with the space, the mounting points and the night-time need.",
-    "note": "Application image from supplied catalogue",
-    "match": "solar-flood",
+    "note": "Application concept, not a completed installation or lighting calculation",
+    "match": "split-panel",
     "heading": "Think beyond one fixture.",
     "checks": [
       "Mark each mounting point on a simple plan",
@@ -90,19 +90,19 @@
     ]
   },
   "garden": {
-    "label": "Garden & path",
-    "title": "Let the landscape lead the way.",
-    "intro": "Add accent lighting around planting and paths. Build a coordinated outdoor assortment while keeping landscape lighting and security lighting requirements distinct.",
-    "image": "scene-garden.jpg",
-    "caption": "Small details. A more inviting garden.",
-    "sub": "Solar spotlights for planting, edges and outdoor features.",
-    "note": "Application image from supplied catalogue",
-    "match": "garden-spot",
+    "label": "Garden & patio",
+    "title": "Bring light into outdoor living.",
+    "intro": "Plan garden gates, patios and sheltered seating around their lighting needs. Combine small motion-sensor wall lights with a separate-panel pendant format where the installation permits.",
+    "image": "scenes/courtyard.png",
+    "caption": "An inviting garden, after dark.",
+    "sub": "Wall lighting and sheltered patio formats for outdoor living.",
+    "note": "Application concept, not a completed installation or lighting calculation",
+    "match": "multi-head",
     "heading": "Build a complete outdoor range.",
     "checks": [
-      "Separate accent light from security coverage",
-      "Choose daylight access over hidden placement",
-      "Coordinate the light color across the range"
+      "Use wall lights for nearby approaches and gates",
+      "Position separate panels in useful daylight",
+      "Confirm enclosure ratings for sheltered fittings"
     ],
     "questions": [
       [

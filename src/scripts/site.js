@@ -437,7 +437,7 @@ function downloadComparison() {
         p.mount,
         p.apps.map((a) => applications[a].label).join("; "),
         p.features.join("; "),
-        "Final specification to be confirmed",
+        (p.specs || []).map(([label,value]) => `${label}: ${value}`).join("; "),
       ]),
     ]),
     "text/csv;charset=utf-8",
@@ -447,7 +447,7 @@ function productDownload(id) {
   const p = getProduct(id);
   download(
     `NICETHRYUN-${id}-overview.txt`,
-    `NICETHRYUN — PRODUCT FAMILY OVERVIEW\n\n${p.name}\n${p.desc}\n\nFORMAT\n${p.features.join("\n")}\nPanel: ${p.panel}\nMounting: ${p.mount}\nApplications: ${p.apps.map((a) => applications[a].label).join(", ")}\n\nSELECTION NOTES\n${p.consider}\n\nCONFIRM WITH YOUR QUOTATION\n${p.questions.join("\n")}\nMOQ, lead time, destination documents and commercial terms.\n\nSource: ${p.source}. Supplied reference material; model and specifications require confirmation. This overview is a planning aid, not a technical datasheet.\n`,
+    `NICETHRYUN — PRODUCT FAMILY OVERVIEW\n\n${p.name}\n${p.desc}\n\nFORMAT\n${p.features.join("\n")}\nPanel: ${p.panel}\nMounting: ${p.mount}\nApplications: ${p.apps.map((a) => applications[a].label).join(", ")}\n\nSELECTION NOTES\n${p.consider}\n\nSUPPLIER SPECIFICATION\n${(p.specs || []).map(([label,value]) => `${label}: ${value}`).join("\n")}\n${p.specNote || "Confirm with sample."}\n\nCONFIRM WITH YOUR QUOTATION\n${p.questions.join("\n")}\nMOQ, lead time, destination documents and commercial terms.\n\nSource: ${p.source}. Supplied reference material; model and specifications require confirmation. This overview is a planning aid, not a technical datasheet.\n`,
   );
 }
 function requestDocs(message, id) {
@@ -459,7 +459,7 @@ function requestDocs(message, id) {
 }
 function sourceNotes() {
   document.getElementById("info-content").innerHTML =
-    `<div class="dialog-header"><h2 id="info-heading">Image & information notes</h2><button class="icon-button" data-close="info-dialog" aria-label="Close image notes">${icon("x")}</button></div><div class="dialog-body"><h3>Product & manufacturing photography</h3><p>Product images, the assembly photograph, measurement equipment and showroom photographs come from the two supplied SHINGEL reference catalogues. Their use here demonstrates the proposed NICETHRYUN website. Factory identity, rights and any brand relationship must be verified before public launch.</p><h3>Application scenes</h3><p>The driveway hero is an AI-generated application illustration based on the supplied product shape. Other application images are taken from the reference catalogue. These are not presented as completed NICETHRYUN customer projects or performance evidence.</p><h3>Specifications & inquiries</h3><p>No factory capacity, certification, price, MOQ or measured performance is asserted in this preview. Product families are reference selections. The quotation flow saves a local draft and exports files; it does not submit data or upload attachments.</p></div>`;
+    `<div class="dialog-header"><h2 id="info-heading">Image & information notes</h2><button class="icon-button" data-close="info-dialog" aria-label="Close image notes">${icon("x")}</button></div><div class="dialog-body"><h3>Product & manufacturing photography</h3><p>The six product images and specifications are matched to the supplied product register. The factory images shown on the homepage and manufacturing page are photographs supplied in the factory image folder: workshop, assembly, panel checks, moulding, warehouse and sample display. They have been resized for the web without generated alterations.</p><h3>Application scenes</h3><p>The eight application and technology scenes are AI-generated illustrations. Product scale follows the supplied dimensions as a visual guide. These are not completed NICETHRYUN customer projects, measured lighting calculations or engineering drawings.</p><h3>Specifications & inquiries</h3><p>Listed specifications come from the supplied product register and require sample confirmation. No factory capacity, certification, price or MOQ is promised. ${inquiryLive ? "Your quote list and draft are saved in this browser. Submitting the inquiry form sends your brief to NICETHRYUN. Attachment filenames are included; files are not uploaded and can be shared separately." : "The quotation flow saves a local draft and exports files; it does not submit data or upload attachments."}</p></div>`;
   refreshIcons();
   infoDialog.showModal();
 }

@@ -1,0 +1,33 @@
+/* Existing NICETHRYUN N artwork, with a restrained material/light treatment.
+   The original alpha mask is reused; this is not a new logo silhouette.
+   One shared cycle lights the N, brand name and descriptor together. */
+.nt-brand.nt-brand{--nt-brand-symbol-size:52px;--nt-brand-name-size:21px;--nt-brand-gap:12px;--nt-brand-cycle:7.2s;position:relative;display:inline-flex;align-items:center;gap:var(--nt-brand-gap);flex-shrink:0;max-width:100%;font-family:Arial,"Helvetica Neue",sans-serif;font-size:inherit;line-height:1;letter-spacing:normal;font-weight:400;vertical-align:middle;isolation:isolate;animation:nt-brand-light var(--nt-brand-cycle) ease-in-out infinite}
+.nt-brand .nt-brand-symbol{position:relative;display:block;width:var(--nt-brand-symbol-size);height:var(--nt-brand-symbol-size);flex:0 0 var(--nt-brand-symbol-size);transform-style:preserve-3d;transform:perspective(320px) rotateX(0) rotateY(0);transition:transform .45s cubic-bezier(.2,.65,.25,1),filter .45s;filter:drop-shadow(0 1px 1px #0008)}
+.nt-brand .nt-brand-fallback{display:block;width:100%;height:100%;max-width:none;object-fit:contain;filter:invert(1);transform:scale(1.12)}
+/* Wider source padding preserves the complete outline; SVG alpha dilation
+   keeps every stroke near one CSS pixel at compact header sizes. */
+.nt-brand .nt-brand-outline{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:visible;pointer-events:none}
+.nt-brand-metal,.nt-brand-sheen{position:absolute;inset:0;display:none;-webkit-mask-image:url('/images/b5-lineart.png');mask-image:url('/images/b5-lineart.png');-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:112% 112%;mask-size:112% 112%;mask-mode:alpha;pointer-events:none}
+.nt-brand-metal{background:linear-gradient(120deg,#d7e2e7 4%,#a7becb 18%,#f4f8f6 31%,#b1c6cf 43%,#7895a8 59%,#e4eef1 74%,#9caeb9 88%,#e5d4b4 100%)}
+.nt-brand-sheen{background:linear-gradient(105deg,transparent 36%,#d8f1ff33 42%,#ffffffed 48%,#ffe4ae66 51%,transparent 59%);background-size:280% 100%;background-position:160% 0;opacity:.85;animation:nt-metal-sweep var(--nt-brand-cycle) ease-in-out infinite;mix-blend-mode:screen}
+.nt-brand .nt-brand-leds{display:block;position:absolute;inset:0;width:100%;height:100%;overflow:visible;transform:scale(1.12);fill:#ffe1a0;opacity:.6;filter:drop-shadow(0 0 8px #efbc6b);animation:nt-led-breathe var(--nt-brand-cycle) ease-in-out infinite;pointer-events:none}
+.nt-brand .nt-brand-type{display:block;min-width:0;line-height:1;letter-spacing:normal;white-space:nowrap}
+.nt-brand .nt-brand-name{display:block;color:#f0f5f5;font-size:var(--nt-brand-name-size);font-weight:600;line-height:1.15;letter-spacing:.125em;text-shadow:0 1px 1px #0005,0 0 15px #c5e0f310;transition:text-shadow .4s;animation:nt-brand-name-light var(--nt-brand-cycle) ease-in-out infinite}
+.nt-brand .nt-brand-descriptor{display:block;margin:7px 0 0;color:#b6c9d0;font-size:11px;font-weight:400;line-height:1.2;letter-spacing:.2em;text-transform:none;animation:nt-brand-caption-light var(--nt-brand-cycle) ease-in-out infinite}
+.nt-brand--compact.nt-brand{--nt-brand-symbol-size:46px;--nt-brand-name-size:18px;--nt-brand-gap:10px}
+@supports ((mask-image:url('/images/b5-lineart.png')) or (-webkit-mask-image:url('/images/b5-lineart.png'))){.nt-brand .nt-brand-fallback{opacity:0}.nt-brand-metal,.nt-brand-sheen{display:block}}
+@keyframes nt-brand-light{0%,18%,100%{filter:brightness(.95) drop-shadow(0 0 0 #edc69700)}46%,54%{filter:brightness(1.13) drop-shadow(0 0 5px #edc69730)}80%{filter:brightness(1) drop-shadow(0 0 1px #edc69708)}}
+@keyframes nt-brand-name-light{0%,18%,100%{color:#dce9ed;text-shadow:0 1px 1px #0005,0 0 1px #d6eaf810}46%,54%{color:#fff2d7;text-shadow:0 0 8px #f6d49c70,0 0 18px #ffe4b322}80%{color:#edf4f5;text-shadow:0 1px 1px #0005,0 0 5px #d6eaf820}}
+@keyframes nt-brand-caption-light{0%,18%,100%{color:#b6c9d0;text-shadow:0 0 1px #d6eaf800}46%,54%{color:#f3ddb7;text-shadow:0 0 6px #f6d49c66}80%{color:#c4d5d9;text-shadow:0 0 2px #f6d49c11}}
+@keyframes nt-metal-sweep{0%,24%{background-position:160% 0;opacity:0}38%{opacity:.8}58%{background-position:-60% 0;opacity:.9}72%,100%{background-position:-60% 0;opacity:0}}
+@keyframes nt-led-breathe{0%,18%,100%{opacity:.45;filter:drop-shadow(0 0 4px #efbc6b44)}46%,54%{opacity:.9;filter:drop-shadow(0 0 9px #efbc6ba6)}80%{opacity:.6;filter:drop-shadow(0 0 5px #efbc6b66)}}
+@media(hover:hover) and (pointer:fine){a:hover>.nt-brand .nt-brand-symbol{transform:perspective(320px) rotateX(5deg) rotateY(-9deg) translateY(-1px);filter:drop-shadow(0 2px 7px #e5cda125)}a:hover>.nt-brand .nt-brand-name{text-shadow:0 1px 1px #0005,0 0 15px #d6eaf833}}
+a:focus-visible>.nt-brand .nt-brand-symbol{filter:drop-shadow(0 0 6px #a7d5ee80)}
+a:focus-visible>.nt-brand .nt-brand-name{color:#fff}
+@media(hover:none){.nt-brand .nt-brand-symbol{transform:none;transition:none}a:active>.nt-brand .nt-brand-symbol{filter:drop-shadow(0 0 7px #efcc9199)}}
+@media(min-width:681px) and (max-width:1320px){.nt-brand.nt-brand{--nt-brand-symbol-size:46px;--nt-brand-name-size:18px;--nt-brand-gap:10px}}
+@media(max-width:680px){.nt-brand.nt-brand{--nt-brand-symbol-size:40px;--nt-brand-name-size:15px;--nt-brand-gap:8px}.nt-brand .nt-brand-name{letter-spacing:.1em}.nt-brand .nt-brand-descriptor{font-size:10px;letter-spacing:.16em;margin-top:6px}.nt-brand.nt-brand{--nt-brand-cycle:8.4s}}
+@media(max-width:380px){.nt-brand.nt-brand{--nt-brand-symbol-size:34px;--nt-brand-name-size:14px;--nt-brand-gap:6px}.nt-brand .nt-brand-descriptor{font-size:9px}}
+.nt-brand--static.nt-brand,.nt-brand--static .nt-brand-name,.nt-brand--static .nt-brand-descriptor{animation:none;filter:none}.nt-brand--static .nt-brand-sheen{animation:none;opacity:0}.nt-brand--static .nt-brand-leds{animation:none;opacity:.6;filter:none}
+@media(prefers-reduced-motion:reduce){.nt-brand.nt-brand,.nt-brand .nt-brand-name,.nt-brand .nt-brand-descriptor{animation:none!important;filter:none!important;text-shadow:none!important}.nt-brand .nt-brand-sheen{animation:none;opacity:0}.nt-brand .nt-brand-leds{animation:none;opacity:.6;filter:none}.nt-brand .nt-brand-symbol,.nt-brand .nt-brand-name{transition:none!important;transform:none!important}a:hover>.nt-brand .nt-brand-symbol{transform:none;filter:none}}
+@media(forced-colors:active){.nt-brand.nt-brand,.nt-brand .nt-brand-name,.nt-brand .nt-brand-descriptor{animation:none;filter:none;text-shadow:none}.nt-brand .nt-brand-outline,.nt-brand .nt-brand-metal,.nt-brand .nt-brand-sheen,.nt-brand .nt-brand-leds{display:none}.nt-brand .nt-brand-fallback{opacity:1;filter:none}.nt-brand .nt-brand-name,.nt-brand .nt-brand-descriptor{color:LinkText}}

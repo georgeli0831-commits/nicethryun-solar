@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { SITE_URL } from './src/config/site.mjs';
+import { isSearchIndexable } from './src/lib/seo.mjs';
 
 // Static files only: Cloudflare Pages can build with `npm run build` → `dist`.
 export default defineConfig({
@@ -9,8 +10,8 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     sitemap({
-      // Conversion page stays out of search (also noindex in its layout).
-      filter: (page) => !page.includes('/inquiry/thanks/'),
+      // Exclude noindex pages and the patio alias; retain only canonical destinations.
+      filter: isSearchIndexable,
     }),
   ],
 });

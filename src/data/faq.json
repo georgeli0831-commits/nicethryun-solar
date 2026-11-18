@@ -20,7 +20,7 @@
     "answer": "Identify the destination and intended sales channel first. Ask for the applicable documents for the exact product configuration, plus labeling, battery transport and importer requirements. A logo or general catalogue statement alone does not verify market suitability."
   },
   {
-    "question": "How does the quotation brief work in this preview?",
-    "answer": "Add products, adjust quantities and fill in your requirements. This HTML preview saves the draft in this browser and exports a TXT or JSON brief. It is not connected to a sales inbox and does not send or upload your information."
+    "question": "How do I request a quotation?",
+    "answer": "Add products, adjust quantities and review your requirements on the inquiry page. Your draft remains available in this browser. Check the submission result on the form: a saved draft or downloaded brief is not a sent request. Attachment filenames are included in the brief; share the files separately."
   }
 ]

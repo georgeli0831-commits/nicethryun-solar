@@ -1,4 +1,12 @@
 ---
-import StaticPage from '../../components/StaticPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import applications from '../../data/applications.json';
+import imagePaths from '../../data/image-paths.json';
+import '../../styles/buyer-content.css';
+const route = (id: string) => `/applications/${id === 'entryway' ? 'entry' : id}/`;
+const photo = (name: string) => imagePaths[name as keyof typeof imagePaths] || `/images/${name}`;
 ---
-<StaticPage page="renderApplication" id="driveway" />
+<BaseLayout title="Solar lighting applications for gardens, entrances & properties | NICETHRYUN" description="Compare solar lighting needs for driveways, entrances, boundaries and patios. Find product formats and prepare a site-specific B2B inquiry.">
+<header class="page-header"><div class="page-header-inner"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-current="page">Applications</span></nav><p class="eyebrow blue-text">START WITH THE SPACE</p><h1>Choose the setting.<br />Then choose the light.</h1><p>Sunlight, mounting position and the way people use a space shape the brief. Explore a setting before selecting a product.</p></div></header>
+<div class="buyer-content"><div class="application-overview">{Object.entries(applications).map(([id, application]) => <article><a href={route(id)} aria-label={`Explore ${application.label} lighting`}><img src={photo(application.image)} alt={application.caption} width="800" height="500" loading="lazy" /></a><div class="application-overview__copy"><p class="eyebrow blue-text">Application concept</p><h2>{application.label}</h2><p>{application.intro}</p><a class="btn btn-outline" href={route(id)}>Explore this application ↗</a></div></article>)}</div><section><h2>Build a useful project brief.</h2><p>Include the destination, site dimensions, mounting points, panel exposure and required lighting schedule. Application images illustrate possible settings; they do not establish measured coverage or a completed installation.</p><div class="buyer-content__actions"><a class="btn btn-blue" href="/guides/solar-lighting-selection/">Read the selection guide</a><a class="btn btn-outline" href="/inquiry/">Discuss your site ↗</a></div></section></div>
+</BaseLayout>

@@ -53,7 +53,7 @@ export function createSharedTemplates(state = {}) {
       )
       .join(
         "",
-      )}</div></div><div class="category-group"><a class="category-top ${fam === "flood" ? "active" : ""}" href="#/products?family=flood">Solar floodlights ${icon("chevron-right")}</a></div><div class="category-group"><a class="category-top ${fam === "garden" ? "active" : ""}" href="#/products?family=garden">Garden spotlights ${icon("chevron-right")}</a></div><a class="category-top" href="#/oem">Your own product range ${icon("arrow-up-right")}</a><a class="sidebar-help" href="#/manufacturing">${icon("factory")}<span><b>From a China manufacturer</b>Built around your business</span></a></aside>`;
+      )}</div></div><div class="category-group"><a class="category-top ${fam === "garden" ? "active" : ""}" href="#/products?family=garden">Patio & pendant lights ${icon("chevron-right")}</a></div><a class="category-top" href="#/oem">Your own product range ${icon("arrow-up-right")}</a><a class="sidebar-help" href="#/manufacturing">${icon("factory")}<span><b>China sourcing & production</b>Built around your business</span></a></aside>`;
   }
   function card(p) {
     return `<article class="product-card"><div class="product-card-top"><label class="compare-check"><input type="checkbox" data-compare="${p.id}" ${compare.has(p.id) ? "checked" : ""} aria-label="Compare ${esc(p.name)}">Compare</label><span class="product-tag">${p.tag}</span></div><a class="product-visual" href="#/product/${p.id}" tabindex="-1" aria-hidden="true">${productImage(p)}</a><div class="product-card-info"><h3><a href="#/product/${p.id}">${p.name}</a></h3><p>${p.short}</p><div class="product-card-bottom"><a class="text-link" href="#/product/${p.id}">View details ${icon("arrow-right")}</a><button class="btn btn-outline btn-small" data-add="${p.id}" aria-label="Add ${p.name} to quote">${icon("plus")}Add to quote</button></div></div></article>`;
@@ -82,7 +82,7 @@ export function createSharedTemplates(state = {}) {
     return '<button class="text-button" data-action="source-note">View source notes</button>';
   }
   function matchesSearch(p, q) {
-    return [p.name, p.short, p.panel, p.mount, p.family, ...p.apps]
+    return [p.name, p.model || "", p.short, p.panel, p.mount, p.family, ...p.apps]
       .join(" ")
       .toLowerCase()
       .includes(q.toLowerCase().trim());
