@@ -1,0 +1,101 @@
+---
+import world from '../data/global-map.json';
+import '../styles/global-markets.css';
+
+const markets = [
+  { id: 'europe', name: 'Europe', detail: 'Germany · Gardens & entrances', countries: ['276'], lift: 112 },
+  { id: 'middleEast', name: 'Middle East', detail: 'Villas · Courtyards & boundaries', countries: ['682', '784'], lift: 88 },
+  { id: 'australia', name: 'Australia', detail: 'Outdoor living · Paths & driveways', countries: ['036'], lift: 100 },
+];
+const origin = world.points.china;
+const destinationFor = (id: string | number) => markets.find(market => market.countries.includes(String(id).padStart(3, '0')))?.id;
+const routeFor = (market: typeof markets[number]) => {
+  const point = world.points[market.id as keyof typeof world.points];
+  return `M${origin.x},${origin.y} C${origin.x + (point.x - origin.x) * .2},${Math.min(origin.y, point.y) - market.lift} ${origin.x + (point.x - origin.x) * .8},${Math.min(origin.y, point.y) - market.lift} ${point.x},${point.y}`;
+};
+const labelPosition = (point: { x: number; y: number }) => `--map-x:${point.x / 12}%;--map-y:${point.y / 5}%;`;
+---
+
+<section class="global-markets" id="global-markets" aria-labelledby="global-markets-title" data-global-markets data-active-market="europe" data-map-running="false">
+  <div class="global-markets__head">
+    <p class="global-markets__eyebrow">China · Solar lighting</p>
+    <h2 id="global-markets-title">From China. <span>For your market.</span></h2>
+    <p class="global-markets__intro">Solar outdoor lighting for distributors, brands and project partners.</p>
+  </div>
+
+  <div class="global-markets__visual">
+    <svg class="global-markets__map" viewBox={world.viewBox} preserveAspectRatio="none" role="img" aria-labelledby="global-map-title global-map-description">
+      <title id="global-map-title">Solar lighting market connections from China</title>
+      <desc id="global-map-description">Illustrative connections from China to Europe, the Middle East and Australia. These indicate markets in focus, rather than confirmed customer locations.</desc>
+      <defs>
+        <radialGradient id="global-map-ocean" cx="51%" cy="44%" r="65%">
+          <stop offset="0" stop-color="#17303c" stop-opacity=".64" />
+          <stop offset="1" stop-color="#0c1114" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="global-map-land" x1="0" y1="0" x2="0" y2="1">
+          <stop stop-color="#60737c" />
+          <stop offset="1" stop-color="#34464e" />
+        </linearGradient>
+        <linearGradient id="global-map-china" x1="0" y1="0" x2="1" y2="1">
+          <stop stop-color="#d2edf4" />
+          <stop offset="1" stop-color="#74adbf" />
+        </linearGradient>
+        <filter id="global-map-glow" x="-200%" y="-200%" width="500%" height="500%">
+          <feGaussianBlur stdDeviation="3" />
+        </filter>
+      </defs>
+      <path d={world.sphere} fill="url(#global-map-ocean)" />
+      <path class="global-markets__graticule" d={world.graticule} />
+      <g class="global-markets__land">
+        {world.countries.map(country => <path
+          class:list={['global-markets__country', { 'global-markets__china': ['156', '158'].includes(String(country.id).padStart(3, '0')) }]}
+          d={country.path}
+          data-destination={destinationFor(country.id)}
+        />)}
+      </g>
+      <g class="global-markets__routes">
+        {markets.map(market => {
+          const point = world.points[market.id as keyof typeof world.points];
+          return <g class="global-markets__route" data-map-route={market.id}>
+            <path class="global-markets__route-base" d={routeFor(market)} />
+            <path class="global-markets__route-glow" d={routeFor(market)} pathLength="100" />
+            <path class="global-markets__route-light" d={routeFor(market)} pathLength="100" />
+            <circle class="global-markets__destination-halo" cx={point.x} cy={point.y} r="10" />
+            <circle class="global-markets__destination-dot" cx={point.x} cy={point.y} r="3.4" />
+          </g>;
+        })}
+      </g>
+      <circle class="global-markets__origin-halo" cx={origin.x} cy={origin.y} r="18" />
+      <circle class="global-markets__origin-ring" cx={origin.x} cy={origin.y} r="8" />
+      <circle class="global-markets__origin-dot" cx={origin.x} cy={origin.y} r="3.7" />
+    </svg>
+    <span class="global-markets__map-label global-markets__map-label--origin" style={labelPosition(origin)}>China <small>Our starting point</small></span>
+    {markets.map(market => <span class="global-markets__map-label" data-map-label={market.id} style={labelPosition(world.points[market.id as keyof typeof world.points])}>{market.name}</span>)}
+  </div>
+
+  <div class="global-markets__bottom">
+    <div class="global-markets__controls-heading">
+      <p>Markets in focus</p>
+      <button class="global-markets__play" type="button" data-map-play hidden>
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path data-map-pause-icon d="M7 5v10M13 5v10" stroke="currentColor" stroke-width="2" /><path data-map-resume-icon d="m7 4 9 6-9 6z" fill="currentColor" display="none" /></svg>
+        <span data-map-play-label>Pause tour</span>
+      </button>
+    </div>
+    <div class="global-markets__selectors" role="group" aria-label="Choose a market to view on the map">
+      {markets.map((market, index) => <button type="button" class="global-markets__market" aria-pressed={index === 0 ? 'true' : 'false'} data-map-select={market.id} disabled>
+        <span class="global-markets__market-dot" aria-hidden="true"></span>
+        <span class="global-markets__market-copy"><strong>{market.name}</strong><small>{market.detail}</small></span>
+        <svg class="global-markets__market-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" stroke="currentColor" stroke-width="1.4" /></svg>
+      </button>)}
+    </div>
+    <div class="global-markets__footnote">
+      <p>Markets in focus · Illustrative connections</p>
+      <a href="/inquiry/">Tell us your destination <span aria-hidden="true">↗</span></a>
+    </div>
+    <span class="global-markets__announcement" data-map-announcement aria-live="polite" aria-atomic="true"></span>
+  </div>
+</section>
+
+<script>
+  import '../scripts/global-markets.js';
+</script>
