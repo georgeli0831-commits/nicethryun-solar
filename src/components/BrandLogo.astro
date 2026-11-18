@@ -1,0 +1,40 @@
+---
+import '../styles/brand-logo.css';
+import { randomUUID } from 'node:crypto';
+interface Props {
+  className?: string;
+  compact?: boolean;
+  animated?: boolean;
+}
+const { className = '', compact = false, animated = true } = Astro.props;
+const outlineFilterId = `nt-brand-outline-${randomUUID()}`;
+const ledWindows = [
+  [191, 213], [243, 213], [296, 213], [348, 213],
+  [265, 381], [320, 381], [376, 381], [430, 381],
+  [349, 552], [405, 552], [462, 552], [517, 552],
+];
+---
+<span class:list={['nt-brand', className, { 'nt-brand--compact': compact, 'nt-brand--static': !animated }]}>
+  <span class="nt-brand-symbol" aria-hidden="true">
+    <img class="nt-brand-fallback" src="/images/b5-lineart.png" alt="" width="48" height="48" />
+    <svg class="nt-brand-outline" viewBox="67 67 1120 1120" xmlns="http://www.w3.org/2000/svg" focusable="false">
+      <defs>
+        <filter id={outlineFilterId} x="0" y="0" width="1254" height="1254" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="solidOutline" />
+          <feFlood flood-color="#d4e4eb" result="outlineMetal" />
+          <feComposite in="outlineMetal" in2="solidOutline" operator="in" />
+        </filter>
+      </defs>
+      <image href="/images/b5-lineart.png" x="0" y="0" width="1254" height="1254" filter={`url(#${outlineFilterId})`} />
+    </svg>
+    <span class="nt-brand-metal"></span>
+    <span class="nt-brand-sheen"></span>
+    <svg class="nt-brand-leds" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+      {ledWindows.map(([x, y]) => <rect x={x} y={y} width="17" height="6" rx="1" />)}
+    </svg>
+  </span>
+  <span class="nt-brand-type">
+    <span class="nt-brand-name">NICETHRYUN</span>
+    <small class="nt-brand-descriptor">solar lighting</small>
+  </span>
+</span>

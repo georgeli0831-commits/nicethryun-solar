@@ -1,181 +1,380 @@
 [
   {
     "id": "multi-head",
-    "name": "Multi-head sensor light",
+    "name": "Three-head solar sensor light",
     "family": "sensor",
     "type": "multi",
-    "image": "product-multi.png",
-    "detail": "product-multi-detail.png",
-    "crop": true,
-    "tag": "Motion sensor",
+    "tag": "Three adjustable heads",
     "panel": "Integrated solar",
     "mount": "Wall mounting",
     "apps": [
       "entryway",
       "driveway",
-      "perimeter"
+      "perimeter",
+      "garden"
     ],
-    "short": "Adjustable heads · PIR motion sensor",
-    "desc": "A flexible wall-light format for entrances, driveways and boundary walls. Adjustable lamp heads help direct light toward different parts of the approach.",
+    "short": "235 mm unfolded width · Three lighting modes",
+    "desc": "A small wall-mounted solar light with three adjustable heads and a sensor in the centre lamp. Use the exposed panel position and the approach direction to plan garden gates and residential entrances.",
     "features": [
       "Three adjustable light heads",
-      "Integrated solar panel",
-      "PIR motion sensor",
-      "Wall-mounted format"
+      "Top-mounted solar panel",
+      "Central motion sensor",
+      "Three listed lighting modes"
     ],
-    "consider": "Choose an exposed wall position with useful daylight. Confirm detection coverage and the chosen operating mode before ordering.",
+    "consider": "The fixture is 235 mm wide when unfolded. Keep the panel exposed to daylight and direct the heads toward the nearby approach. Check the selected mode and mounting position with a sample.",
     "questions": [
-      "Required light output and illuminated area",
-      "Sensor range, angle and operating modes",
-      "Battery capacity, service access and winter runtime"
+      "Mounting position and useful daily sunlight",
+      "Desired motion-to-off, dim or constant-light mode",
+      "Required runtime and target order quantity"
     ],
-    "source": "Solar catalogue, page 7"
-  },
-  {
-    "id": "split-panel",
-    "name": "Split-panel security light",
-    "family": "sensor",
-    "type": "split",
-    "image": "product-split.png",
-    "detail": "product-split-detail.png",
-    "tag": "Separate panel",
-    "panel": "Split solar",
-    "mount": "Wall mounting",
-    "apps": [
-      "entryway",
-      "driveway",
-      "perimeter"
+    "model": null,
+    "image": "products/multi-head.png",
+    "crop": false,
+    "specs": [
+      [
+        "Product size, unfolded",
+        "235 × 135 × 130 mm"
+      ],
+      [
+        "Solar panel size",
+        "150 × 102 mm"
+      ],
+      [
+        "Solar panel voltage",
+        "5.5 V"
+      ],
+      [
+        "Battery",
+        "18650 · 3.7 V · 800 mAh"
+      ],
+      [
+        "Light colour",
+        "White"
+      ],
+      [
+        "Operating modes",
+        "Motion to off / motion to dim / constant light"
+      ]
     ],
-    "short": "Separate panel · Flexible placement",
-    "desc": "Separate the panel position from the light position. A useful starting point when an entrance is shaded but a nearby wall or roof edge receives more sunlight.",
-    "features": [
-      "Separate solar panel",
-      "Adjustable multi-head format",
-      "Motion sensor",
-      "Remote shown in reference set"
-    ],
-    "consider": "Plan the panel position and cable route together. Confirm cable length, connector protection and the complete accessory list for your configuration.",
-    "questions": [
-      "Panel location and required cable length",
-      "Battery and panel pairing for the chosen mode",
-      "Cable routing and supplied mounting accessories"
-    ],
-    "source": "Solar catalogue, page 8"
+    "source": "Supplier specification; confirm with sample",
+    "specNote": "Values are from the supplied product specification and have not been independently tested. Confirm the selected configuration with a sample."
   },
   {
     "id": "compact-wall",
-    "name": "Compact wall sensor",
+    "name": "XYW068 compact sensor wall light",
     "family": "sensor",
     "type": "compact",
-    "image": "product-compact.png",
-    "tag": "Compact format",
+    "tag": "Compact wall light",
     "panel": "Integrated solar",
     "mount": "Wall mounting",
     "apps": [
       "entryway",
-      "perimeter"
+      "perimeter",
+      "garden"
     ],
-    "short": "Wide-face design · Compact wall format",
-    "desc": "A compact integrated format for doorways, side passages and residential boundary walls. A straightforward family to consider for a focused retail or distributor range.",
+    "short": "119 × 101 × 54 mm · 33 LEDs",
+    "desc": "A compact one-piece solar wall light for garden gates, side passages and doorways. Its front sensor and lens-style LED layout sit beneath the integrated solar panel.",
     "features": [
-      "Compact one-piece housing",
+      "119 mm listed product size",
+      "33 LEDs",
       "Integrated solar panel",
-      "Front motion sensor",
-      "Multiple illuminated faces"
+      "Motion-sensing control"
     ],
-    "consider": "Check mounting height and nearby obstructions. Final output, detection settings and enclosure rating depend on the selected model.",
+    "consider": "This is a small domestic wall fixture. Plan around the actual 119 × 101 × 54 mm dimensions and confirm suitable mounting height and sensor response with the sample.",
     "questions": [
-      "Mounting height and sensor behavior",
-      "Retail packaging and multi-pack requirements",
-      "Selected-model output and battery specification"
+      "Mounting surface and intended lighting area",
+      "Sensor response and operating schedule",
+      "Packaging, pack size and target quantity"
     ],
-    "source": "Solar catalogue, page 12"
+    "model": "XYW068",
+    "image": "products/compact-wall.png",
+    "crop": false,
+    "specs": [
+      [
+        "Product size",
+        "119 × 101 × 54 mm"
+      ],
+      [
+        "Solar panel",
+        "5.5 V · 0.55 W"
+      ],
+      [
+        "Battery capacity",
+        "1,200 mAh"
+      ],
+      [
+        "LED count",
+        "33"
+      ],
+      [
+        "Light colour",
+        "White"
+      ],
+      [
+        "Listed light output",
+        "136 lm"
+      ],
+      [
+        "Control",
+        "Motion sensing"
+      ]
+    ],
+    "source": "Supplier specification; confirm with sample",
+    "specNote": "Values are from the supplied product specification and have not been independently tested. Confirm the selected configuration with a sample."
   },
   {
     "id": "slim-wall",
-    "name": "Slim wall sensor light",
+    "name": "HSG-A18 three-sided sensor wall light",
     "family": "sensor",
     "type": "compact",
-    "image": "product-slim.png",
-    "tag": "Wall lighting",
+    "tag": "Three illuminated faces",
     "panel": "Integrated solar",
     "mount": "Wall mounting",
     "apps": [
       "entryway",
-      "perimeter"
+      "perimeter",
+      "garden"
     ],
-    "short": "Low-profile housing · Integrated panel",
-    "desc": "A low-profile wall-mounted light for side entrances and paths alongside a building. Its compact form supports a smaller, easy-to-understand assortment.",
+    "short": "121 LEDs · Integrated solar panel",
+    "desc": "An integrated solar wall light with LEDs across three faces and a front motion sensor. Consider it for entrances and side passages where a compact wall format suits the site.",
     "features": [
-      "Slim rectangular housing",
-      "Integrated panel",
-      "Wall-mount format",
-      "Sensor-light product family"
+      "Three illuminated faces",
+      "121 LEDs",
+      "Integrated polycrystalline panel",
+      "Front motion sensor"
     ],
-    "consider": "Review the exact configuration and mounting drawing during sample approval. A slim form alone does not indicate light output or coverage.",
+    "consider": "Confirm the lamp dimensions before planning the mounting layout. The source lists inner-box dimensions only, so no lamp dimensions are inferred from the packaging.",
     "questions": [
-      "Intended illuminated area",
-      "Requested control modes and light color",
-      "Branding, labeling and carton requirements"
+      "Confirmed product dimensions and mounting drawing",
+      "Required light colour and motion behaviour",
+      "Sample validation and destination documents"
     ],
-    "source": "Solar catalogue, page 13"
-  },
-  {
-    "id": "solar-flood",
-    "name": "Split solar floodlight",
-    "family": "flood",
-    "type": "flood",
-    "image": "product-flood.jpg",
-    "tag": "Area lighting",
-    "panel": "Split solar",
-    "mount": "Bracket mounting",
-    "apps": [
-      "driveway",
-      "perimeter"
+    "model": "HSG-A18",
+    "image": "products/slim-wall.png",
+    "crop": false,
+    "specs": [
+      [
+        "Product size",
+        "Confirm with sample"
+      ],
+      [
+        "Solar panel",
+        "Polycrystalline · 5.5 V · 0.33 W"
+      ],
+      [
+        "Battery",
+        "18650 · 3.7 V · 1,200 mAh"
+      ],
+      [
+        "LED count",
+        "121 × 2835 LEDs"
+      ],
+      [
+        "Listed colour temperature",
+        "6,500 K"
+      ],
+      [
+        "Control",
+        "Motion sensing"
+      ]
     ],
-    "short": "Separate panel · Adjustable bracket",
-    "desc": "A separate-panel floodlight format for yards and perimeter areas. Begin with the mounting position, required coverage and daily operating schedule to define the right configuration.",
-    "features": [
-      "Separate rectangular panel",
-      "Adjustable light bracket",
-      "Sensor shown in reference set",
-      "Remote shown in reference set"
-    ],
-    "consider": "For larger areas, use a lighting plan. Confirm usable lumens, beam angle, mounting height and runtime together rather than selecting by headline wattage.",
-    "questions": [
-      "Area dimensions and mounting height",
-      "Required runtime and dimming schedule",
-      "Usable light output and supporting test data"
-    ],
-    "source": "Solar catalogue, page 9"
+    "source": "Supplier specification; confirm with sample",
+    "specNote": "Values are from the supplied product specification and have not been independently tested. Confirm the selected configuration with a sample."
   },
   {
     "id": "garden-spot",
-    "name": "Solar garden spotlight",
+    "name": "Four-leaf solar pendant light",
     "family": "garden",
-    "type": "spot",
-    "image": "product-spot.jpg",
-    "tag": "Landscape lighting",
-    "panel": "Integrated solar",
-    "mount": "Ground stake",
+    "type": "pendant",
+    "tag": "Patio & pendant",
+    "panel": "Split solar",
+    "mount": "Suspended mounting",
     "apps": [
       "garden",
       "entryway"
     ],
-    "short": "Ground stake · Directional accent light",
-    "desc": "A complementary landscape family for planting, garden paths and feature lighting. Pair it with motion-sensor wall lights when building a broader outdoor range.",
+    "short": "285 mm unfolded span · Separate panel",
+    "desc": "A four-leaf light for sheltered garden seating, pergolas and patio structures, with a separate solar panel that can be placed in daylight. The source set includes a remote and installation accessories.",
     "features": [
-      "Ground-stake format",
-      "Directional spotlight head",
-      "Integrated panel",
-      "Landscape-lighting family"
+      "Four folding LED leaves",
+      "Separate solar panel",
+      "168 LEDs",
+      "Remote shown in supplied set"
     ],
-    "consider": "Treat accent lighting separately from security coverage. Check ground conditions, planting growth and panel exposure at the chosen location.",
+    "consider": "Keep the panel outdoors in useful sunlight while placing the lamp where permitted by the confirmed enclosure rating. Confirm the cable route, hanging hardware and supported remote functions.",
     "questions": [
-      "Accent lighting or path guidance requirement",
-      "Preferred light color and evening schedule",
-      "Pack size, packaging and seasonal range planning"
+      "Sheltered mounting location and enclosure rating",
+      "Cable length and exposed panel position",
+      "Confirmed controls, runtime and installation accessories"
     ],
-    "source": "Solar catalogue, page 20"
+    "model": null,
+    "image": "products/garden-spot.png",
+    "crop": false,
+    "specs": [
+      [
+        "Product size, unfolded",
+        "285 × 285 × 100 mm"
+      ],
+      [
+        "Product size, folded",
+        "185 × 185 × 105 mm"
+      ],
+      [
+        "Solar panel size",
+        "115 × 192 mm"
+      ],
+      [
+        "Solar panel",
+        "5 V · 3 W"
+      ],
+      [
+        "Battery capacity",
+        "3 Ah"
+      ],
+      [
+        "LED count",
+        "168 × 2835 LEDs"
+      ],
+      [
+        "Operating modes",
+        "Confirm with sample"
+      ]
+    ],
+    "source": "Supplier specification; confirm with sample",
+    "specNote": "Values are from the supplied product specification and have not been independently tested. Confirm the selected configuration with a sample."
+  },
+  {
+    "id": "split-panel",
+    "name": "333 LED split-panel sensor light",
+    "family": "sensor",
+    "type": "split",
+    "tag": "Separate solar panel",
+    "panel": "Split solar",
+    "mount": "Wall mounting",
+    "apps": [
+      "entryway",
+      "driveway",
+      "perimeter"
+    ],
+    "short": "Four lamp heads · Separate panel",
+    "desc": "A four-head wall light with an independent solar panel and connecting cable. This format allows the light to sit near a doorway while the panel is positioned where it receives useful sunlight.",
+    "features": [
+      "Four adjustable lamp heads",
+      "Separate solar panel",
+      "333 LEDs",
+      "Motion-to-off and dimming modes"
+    ],
+    "consider": "The lamp and panel physical dimensions are not listed for this configuration. Confirm both with the sample, together with cable length, mounting points and the selected operating mode.",
+    "questions": [
+      "Panel location, cable route and required cable length",
+      "Confirmed lamp dimensions and sensor coverage",
+      "Battery capacity and runtime in the selected mode"
+    ],
+    "model": null,
+    "image": "products/split-panel.png",
+    "crop": false,
+    "specs": [
+      [
+        "Product size",
+        "Confirm with sample"
+      ],
+      [
+        "Solar panel",
+        "Polycrystalline · 5.5 V · 1.5 W"
+      ],
+      [
+        "Battery cells",
+        "2 × 18650 · 3.7 V; capacity to confirm"
+      ],
+      [
+        "LED count",
+        "333"
+      ],
+      [
+        "Listed light output",
+        "300–450 lm"
+      ],
+      [
+        "Listed colour temperature",
+        "6,000–6,500 K"
+      ],
+      [
+        "Listed sensing distance",
+        "3–5 m"
+      ],
+      [
+        "Operating modes",
+        "Motion to off after 20–25 s / motion to dim / constant dim"
+      ]
+    ],
+    "source": "Supplier specification; confirm with sample",
+    "specNote": "Values are from the supplied product specification and have not been independently tested. Confirm the selected configuration with a sample."
+  },
+  {
+    "id": "solar-flood",
+    "name": "333 LED integrated sensor light",
+    "family": "sensor",
+    "type": "multi",
+    "tag": "Four adjustable heads",
+    "panel": "Integrated solar",
+    "mount": "Wall mounting",
+    "apps": [
+      "entryway",
+      "driveway",
+      "perimeter"
+    ],
+    "short": "333 LEDs · Integrated panel",
+    "desc": "A four-head motion-sensor light with its solar panel mounted above the lamp assembly. An exposed wall position keeps the panel and lighting heads together in one installation.",
+    "features": [
+      "Four adjustable lamp heads",
+      "Top-mounted solar panel",
+      "333 LEDs",
+      "Motion-to-off and dimming modes"
+    ],
+    "consider": "Choose an exposed wall position rather than a shaded location under a deep overhang. Confirm physical dimensions, battery capacity and runtime before specifying a project.",
+    "questions": [
+      "Product dimensions and mounting drawing",
+      "Required operating mode and illumination area",
+      "Battery capacity, runtime and selected configuration"
+    ],
+    "model": null,
+    "image": "products/solar-flood.png",
+    "crop": false,
+    "specs": [
+      [
+        "Product size",
+        "Confirm with sample"
+      ],
+      [
+        "Solar panel",
+        "Polycrystalline · 5.5 V · 1.5 W"
+      ],
+      [
+        "Battery cells",
+        "2 × 18650 · 3.7 V; capacity to confirm"
+      ],
+      [
+        "LED count",
+        "333"
+      ],
+      [
+        "Listed light output",
+        "300–450 lm"
+      ],
+      [
+        "Listed colour temperature",
+        "6,000–6,500 K"
+      ],
+      [
+        "Listed sensing distance",
+        "3–5 m"
+      ],
+      [
+        "Operating modes",
+        "Motion to off after 20–25 s / motion to dim / constant dim"
+      ]
+    ],
+    "source": "Supplier specification; confirm with sample",
+    "specNote": "Values are from the supplied product specification and have not been independently tested. Confirm the selected configuration with a sample."
   }
 ]

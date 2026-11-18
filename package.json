@@ -13,12 +13,17 @@
     "check": "astro check",
     "qa": "node scripts/qa.mjs",
     "qa:lighthouse": "node scripts/lighthouse.mjs",
-    "qa:integrity": "node scripts/check-migration.mjs"
+    "qa:integrity": "node scripts/check-migration.mjs",
+    "prebuild": "node scripts/generate-range.mjs",
+    "qa:release": "node scripts/check-release.mjs",
+    "qa:seo": "node scripts/test-seo.mjs --built",
+    "test:scenes": "node scripts/test-scene-playback.mjs"
   },
   "dependencies": {
     "astro": "5.18.2",
     "@astrojs/sitemap": "3.7.3",
-    "lucide": "1.8.0"
+    "lucide": "1.8.0",
+    "three": "^0.187.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

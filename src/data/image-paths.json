@@ -14,5 +14,19 @@
   "scene-entry.jpg": "/images/scene-entry.jpg",
   "product-multi.png": "/images/product-multi.webp",
   "hero-courtyard.png": "/images/hero-courtyard.webp",
-  "scene-patio.jpg": "/images/scene-patio.jpg"
+  "scene-patio.jpg": "/images/scene-patio.jpg",
+  "products/multi-head.png": "/images/products/multi-head.webp",
+  "products/compact-wall.png": "/images/products/compact-wall.webp",
+  "products/slim-wall.png": "/images/products/slim-wall.webp",
+  "products/garden-spot.png": "/images/products/garden-spot.webp",
+  "products/split-panel.png": "/images/products/split-panel.webp",
+  "products/solar-flood.png": "/images/products/solar-flood.webp",
+  "scenes/daytime.png": "/images/scenes/daytime.webp",
+  "scenes/charging.png": "/images/scenes/charging.webp",
+  "scenes/passerby.png": "/images/scenes/passerby.webp",
+  "scenes/security.png": "/images/scenes/security.webp",
+  "scenes/courtyard.png": "/images/scenes/courtyard.webp",
+  "scenes/driveway.png": "/images/scenes/driveway.webp",
+  "scenes/energy.png": "/images/scenes/energy.webp",
+  "scenes/coverage-scale-corrected.png": "/images/scenes/coverage-scale-corrected.webp"
 }

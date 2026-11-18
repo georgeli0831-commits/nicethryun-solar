@@ -1,6 +1,11 @@
 ---
 import { site } from '../config/site.mjs';
 import { langTag, publicRegions, translatePath } from '../i18n';
+import products from '../data/products.json';
+import applications from '../data/applications.json';
+import imagePaths from '../data/image-paths.json';
+import { familyNames } from '../data/labels.json';
+import { createPageSeo, serializeJsonLd } from '../lib/seo.mjs';
 
 interface Props {
   title?: string;
@@ -9,24 +14,16 @@ interface Props {
   canonicalPath?: string;
 }
 
-const {
-  title = site.title,
-  description = site.description,
-  image = site.defaultImage,
-  canonicalPath = Astro.url.pathname,
-} = Astro.props;
-const canonical = new URL(canonicalPath, site.domain).href;
-const ogImage = new URL(image, site.domain).href;
+const { title, description, image: ogImage, canonicalPath, canonical, graph } = createPageSeo(
+  Astro.url.pathname,
+  { site, products, applications, imagePaths, familyNames },
+  Astro.props,
+);
 const alternates = publicRegions.map((region) => ({
   tag: langTag[region],
   href: new URL(translatePath(canonicalPath, 'en', region), site.domain).href,
 }));
-const organization = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: site.brand,
-  url: site.domain,
-}).replace(/</g, '\\u003c');
+const structuredData = serializeJsonLd(graph);
 ---
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,5 +40,7 @@ const organization = JSON.stringify({
 <meta property="og:locale" content="en_US" />
 <meta property="og:image" content={ogImage} />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
-<script type="application/ld+json" set:html={organization} />
+<script type="application/ld+json" set:html={structuredData} />

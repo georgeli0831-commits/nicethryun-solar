@@ -6,7 +6,7 @@ export function createApplicationTemplates(_state, shared) {
   function renderApplication(id) {
     const a = applications[id];
     if (!a) return renderNotFound();
-    return `<section class="application-page-hero"><div class="application-page-copy">${breadcrumb([["Applications", "/applications/driveway"], [a.label]])}<p class="eyebrow">${a.label.toUpperCase()} LIGHTING</p><h1>${a.title}</h1><p>${a.intro}</p><a class="btn btn-amber" href="#/products?application=${id}">Explore suitable formats ${icon("arrow-right")}</a></div><div class="application-page-photo"><img src="${assets(a.image)}" alt="${a.caption}"><small>${a.note}</small></div></section><nav class="route-tabs" aria-label="Application navigation">${Object.entries(
+    return `<section class="application-page-hero"><div class="application-page-copy">${breadcrumb([["Applications", "/applications"], [a.label]])}<p class="eyebrow">${a.label.toUpperCase()} LIGHTING</p><h1>${a.title}</h1><p>${a.intro}</p><a class="btn btn-amber" href="#/products?application=${id}">Explore suitable formats ${icon("arrow-right")}</a></div><div class="application-page-photo"><img src="${assets(a.image)}" alt="${a.caption}"><small>${a.note}</small></div></section><nav class="route-tabs" aria-label="Application navigation">${Object.entries(
       applications,
     )
       .map(

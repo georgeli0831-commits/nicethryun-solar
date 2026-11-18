@@ -1,8 +1,7 @@
 {
   "familyNames": {
     "sensor": "Motion sensor lights",
-    "flood": "Solar floodlights",
-    "garden": "Garden spotlights"
+    "garden": "Patio & pendant lights"
   },
   "typeNames": {
     "multi": "Multi-head lights",

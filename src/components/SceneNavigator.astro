@@ -1,0 +1,69 @@
+---
+import '../styles/scene-explorer.css';
+
+interface SceneOption {
+  id: string;
+  label: string;
+  chapter: string;
+  image: string;
+}
+
+interface Props {
+  scenes: SceneOption[];
+}
+
+const { scenes } = Astro.props;
+---
+
+<div class="scene-explorer">
+  <div class="scene-explorer__playback" data-scene-playback hidden>
+    <div class="scene-explorer__tour">
+      <span class="scene-explorer__position" data-scene-position aria-label={`Scene 1 of ${scenes.length}`}>
+        <b data-scene-current>01</b><span aria-hidden="true"> / {String(scenes.length).padStart(2, '0')}</span>
+      </span>
+      <div class="scene-explorer__timing">
+        <p data-scene-playback-status>Six seconds. A new setting.</p>
+        <div class="scene-explorer__progress" aria-hidden="true"><span data-scene-progress></span></div>
+      </div>
+    </div>
+    <button type="button" class="scene-explorer__play" data-scene-play aria-label="Pause scene tour">
+      <span class="scene-explorer__play-icon" aria-hidden="true">
+        <span data-scene-pause-icon><svg viewBox="0 0 20 20" fill="currentColor"><rect x="5" y="4" width="3" height="12" rx="1" /><rect x="12" y="4" width="3" height="12" rx="1" /></svg></span>
+        <span data-scene-resume-icon hidden><svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 3.5a.8.8 0 0 1 1.2-.7l10 6.5a.8.8 0 0 1 0 1.4l-10 6.5a.8.8 0 0 1-1.2-.7z" /></svg></span>
+      </span>
+      <span data-scene-play-label>Pause tour</span>
+    </button>
+  </div>
+  <span class="scene-explorer__announcement" data-scene-announcement aria-live="polite" aria-atomic="true"></span>
+  <noscript>
+    <style is:inline>.scene-explorer__rail { display: none !important; }</style>
+    <p class="scene-explorer__fallback">Scene 01 of {String(scenes.length).padStart(2, '0')}: {scenes[0]?.label}. <a href="/applications/">Explore lighting applications ↗</a></p>
+  </noscript>
+  <div class="scene-explorer__rail" role="tablist" aria-label="Lighting scenes" aria-orientation="horizontal">
+    {scenes.map((scene, index) => (
+      <button
+        type="button"
+        class="scene-explorer__tab"
+        role="tab"
+        id={`scene-tab-${scene.id}`}
+        aria-label={scene.label}
+        aria-controls={`scene-panel-${scene.id}`}
+        aria-selected={index === 0 ? 'true' : 'false'}
+        tabindex={index === 0 ? 0 : -1}
+        data-scene={scene.id}
+      >
+        <span class="scene-explorer__image">
+          <img src={scene.image} alt="" loading="lazy" width="320" height="180" />
+          <span class="scene-explorer__number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+          <span class="scene-explorer__selected" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none"><path d="m4 8 2.5 2.5L12 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </span>
+        </span>
+        <span class="scene-explorer__copy">
+          <span class="scene-explorer__chapter">{scene.chapter}</span>
+          <span class="scene-explorer__label">{scene.label}</span>
+        </span>
+      </button>
+    ))}
+  </div>
+</div>

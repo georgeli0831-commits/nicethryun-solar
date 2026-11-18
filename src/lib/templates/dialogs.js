@@ -1,4 +1,4 @@
-import { applications, icon } from "./shared.js";
+import { applications, icon, esc } from "./shared.js";
 
 /** Dialogs markup retained from the approved single-file prototype. */
 export function createDialogsTemplates(state, shared) {
@@ -19,7 +19,8 @@ export function createDialogsTemplates(state, shared) {
   function renderCompare() {
     if (compare.size < 2) return;
     const list = [...compare].map(getProduct);
-    return `<div class="dialog-header"><div><p class="eyebrow blue-text">SIDE-BY-SIDE SELECTION</p><h2 id="compare-heading" style="margin-top:7px">Compare product families.</h2><p>Compare format and use first. Confirm final specifications in your quotation.</p></div><button class="icon-button" data-close="compare-dialog" aria-label="Close comparison">${icon("x")}</button></div><div class="compare-scroll"><table class="compare-table"><caption class="subtle-note" style="text-align:left;padding:12px 0">Scroll horizontally on smaller screens to view all selected families.</caption><thead><tr><th scope="col">Product family</th>${list.map((p) => `<th scope="col">${productImage(p)}<b>${p.name}</b><button class="btn btn-blue" data-add="${p.id}">${icon("plus")}Add to quote</button></th>`).join("")}</tr></thead><tbody>${[
+    return `<div class="dialog-header"><div><p class="eyebrow blue-text">SIDE-BY-SIDE SELECTION</p><h2 id="compare-heading" style="margin-top:7px">Compare product families.</h2><p>Compare format and use first. Listed specifications come from the supplier record; confirm them with a sample.</p></div><button class="icon-button" data-close="compare-dialog" aria-label="Close comparison">${icon("x")}</button></div><div class="compare-scroll"><table class="compare-table"><caption class="subtle-note" style="text-align:left;padding:12px 0">Scroll horizontally on smaller screens to view all selected families.</caption><thead><tr><th scope="col">Product family</th>${list.map((p) => `<th scope="col">${productImage(p)}<b>${p.name}</b><button class="btn btn-blue" data-add="${p.id}">${icon("plus")}Add to quote</button></th>`).join("")}</tr></thead><tbody>${[
+      ["Supplier model", (p) => p.model || "Not specified"],
       ["Panel arrangement", (p) => p.panel],
       ["Installation", (p) => p.mount],
       [
@@ -30,7 +31,7 @@ export function createDialogsTemplates(state, shared) {
       ["Selection consideration", (p) => p.consider],
       [
         "Technical data",
-        () => "Confirm selected-model output, battery, runtime and documents",
+        (p) => (p.specs || []).map(([label,value]) => `${esc(label)}: ${esc(value)}`).join("<br>"),
       ],
       ["MOQ / lead time", () => "Confirm with quotation"],
     ]
