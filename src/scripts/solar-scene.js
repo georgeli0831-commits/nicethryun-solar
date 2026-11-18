@@ -661,7 +661,10 @@ export function mountSolarScene(container, opts = {}) {
     const subjectWidth=referenceReady?referenceWidth+.24:3.7;
     const subjectHeight=referenceReady?3.87:3.7;
     const fit=Math.max(.05,Math.min(slotWorldWidth/subjectWidth,slotWorldHeight/subjectHeight));
-    brandLayout.scale.setScalar(fit);
+    // Phone-only art direction: keep the full-hero interaction canvas while
+    // reducing the complete assembled mark (N + wordmark + LEDs) by one fifth.
+    const phoneScale=matchMedia('(max-width: 760px)').matches ? .8 : 1;
+    brandLayout.scale.setScalar(fit*phoneScale);
     brandLayout.position.set(((left+slotWidth*.5)/width-.5)*viewWidth,
       cameraTarget.y+(.5-(top+slotHeight*.5)/height)*viewHeight,0);
     brandLayout.updateMatrixWorld(true);

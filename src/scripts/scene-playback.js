@@ -1,7 +1,7 @@
 /** One countdown, with persistent user intent separate from temporary blockers. */
 export function createScenePlayback({
   count,
-  interval = 6000,
+  interval = 2000,
   reducedMotion = false,
   onChange = () => {},
   now = () => performance.now(),

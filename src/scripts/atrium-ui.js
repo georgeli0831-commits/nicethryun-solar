@@ -113,7 +113,7 @@ function mountSceneExplorer(){
     playButton.disabled=state.reducedMotion;
     root.querySelector('[data-scene-pause-icon]').toggleAttribute('hidden',!state.wantsPlay);
     root.querySelector('[data-scene-resume-icon]').toggleAttribute('hidden',state.wantsPlay);
-    const status=state.reducedMotion?'Choose a scene · Auto-play off':!state.wantsPlay?'Paused · Explore at your pace':!state.inView||!state.pageVisible?'Ready when the scene is in view':state.hovered||state.focused||state.interacting?'Paused while you explore':'Playing · 6 seconds per scene';
+    const status=state.reducedMotion?'Choose a scene · Auto-play off':!state.wantsPlay?'Paused · Explore at your pace':!state.inView||!state.pageVisible?'Ready when the scene is in view':state.hovered||state.focused||state.interacting?'Paused while you explore':'Playing · 2 seconds per scene';
     root.querySelector('[data-scene-playback-status]').textContent=status;
     // A single native animation mirrors the state machine's remaining time.
     // No progress interval or second scene timer competes with the countdown.
@@ -125,7 +125,7 @@ function mountSceneExplorer(){
     }
   }
 
-  const playback=createScenePlayback({count:sceneTabs.length,interval:6000,reducedMotion:sceneMotion.matches,onChange:renderPlayback});
+  const playback=createScenePlayback({count:sceneTabs.length,interval:2000,reducedMotion:sceneMotion.matches,onChange:renderPlayback});
   playback.setPageVisible(!document.hidden);
   function choose(index,focus=false){
     playback.select(index);

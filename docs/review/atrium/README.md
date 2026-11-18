@@ -5,8 +5,9 @@ Review date: 2026-11-19. This release carries the approved visual prototype into
 ## Buyer-facing changes
 
 - Large coloured solar N, brand name and descriptor use image-sampled particles. The pointer acts across the hero; a particle stream follows it and returns automatically after inactivity. No inner square clips the particles. The resting brand remains large; background crops adapt around it.
+- Latest mobile revision: at widths up to 760px, the entire assembled particle mark and its fallback poster are 80% of the previous size. Desktop sizing and the full-hero interaction canvas remain unchanged.
 - Ten hero photographs/illustrations alternate every two seconds. Factory photographs and generated application concepts are labelled separately. Real production photographs also appear immediately below the hero.
-- Eight application scenes advance every six seconds when visible. Visitors can pause/continue, select a card, use keyboard navigation or swipe. Manual selection pauses until Continue; hover/focus, offscreen and hidden tabs temporarily suspend playback. Reduced-motion users start with manual control.
+- Eight application scenes advance every two seconds when visible. Visitors can pause/continue, select a card, use keyboard navigation or swipe. Manual selection pauses until Continue; hover/focus, offscreen and hidden tabs temporarily suspend playback. Reduced-motion users start with manual control.
 - Six supplier-reference product families use actual product imagery and qualified register specifications. Sample confirmation is required; illustrations do not establish output, coverage or factory ownership.
 - Static buyer content includes application overview pages and a solar-lighting selection guide. Product CSV downloads are generated from the same product data during build.
 - Route metadata, canonical URLs, sitemap exclusions, stable entity graphs and explicit OAI-SearchBot access are documented in [search-foundation.md](../../seo/search-foundation.md).
